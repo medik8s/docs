@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Medik8s - High Availability for Singleton Workloads
 
-You can use the [editor on GitHub](https://github.com/beekhof/docs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Hardware is imperfect, and software contains bugs. When node level failures such
+as kernel hangs or dead NICs occur, the work required from the cluster does not
+decrease - workloads from affected nodes need to be restarted somewhere.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+However some workloads, such as RWO volumes and StatefulSets, may require
+at-most-one semantics.  Failures affecting these kind of workloads risk data
+loss and/or corruption if nodes (and the workloads running on them) are assumed
+to be dead wheneveer we stop hearing from them.  For this reason it is important
+to know that the node has reached a safe state before initiating recovery of the
+workload.
 
-### Markdown
+Unfortunately it is not always practical to require admin intervention in order
+to confirm the node's true status, and in order to automate the recovery of
+exclusive workloads, we need a way to: put failed nodes into a safe state;
+indicate to the scheduler that affected workloads can be started elsewhere; and
+then attempt to recover cluster capacity.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/beekhof/docs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Medik8s presents a collection of projects that can be installed on any
+kubernetes-based cluster to automate:
+* the [detection of failures](),
+* putting [nodes into a safe state](),
+* allowing the scheduler to [recover affected workloads]()
+* attempting to [restore cluster capacity]()
