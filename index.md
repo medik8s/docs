@@ -20,7 +20,7 @@ then attempt to recover cluster capacity.
 
 Medik8s presents a collection of projects that can be installed on any
 kubernetes-based cluster to automate:
-* the [detection of failures](),
-* putting [nodes into a safe state](),
+* the [detection of failures](failure_detection),
+* putting [nodes into a safe state](remediation),
 * allowing the scheduler to [recover affected workloads]()
 * attempting to [restore cluster capacity]()
