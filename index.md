@@ -7,7 +7,7 @@ decrease - workloads from affected nodes need to be restarted somewhere.
 However some workloads, such as RWO volumes and StatefulSets, may require
 at-most-one semantics.  Failures affecting these kind of workloads risk data
 loss and/or corruption if nodes (and the workloads running on them) are assumed
-to be dead wheneveer we stop hearing from them.  For this reason it is important
+to be dead whenever we stop hearing from them.  For this reason it is important
 to know that the node has reached a safe state before initiating recovery of the
 workload.
 
