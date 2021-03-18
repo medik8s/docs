@@ -21,3 +21,9 @@ It is therefor clear that there is no one-size-fits-all solution for
 remediation.  For this reason, the [ExternalRemediation API]() was established to
 allow remediation mechanisms to exist, even within a single cluster, without
 creating conflicts.
+
+Implementations conforming to the ExternalRemediation API include:
+* poison-pill - a mechanism designed for environments without programatic access to BMC-like hardware
+* (planned) machine - a mechanism designed for any cluster with a functioning Machine API
+* (planned) metal3 - a mechanism designed for bare metal clusters with a functioning Machine API
+* (planned) direct - a mechanism designed for environments with an traditional API end-point (eg. IPMI) for power cycling cluster nodes
