@@ -18,7 +18,7 @@ satisfied remediation is complete.  For some mechanisms that may mean the Node
 has entered a safe state (eg. the underlying "hardware" has been deprovisioned),
 for others it may be the Node coming back online (eg. after a reboot).
 
-Remediation is not always the correct responce to a failure.  Especially in
+Remediation is not always the correct response to a failure.  Especially in
 larger clusters, we want to protect against failures that appear to take out
 large portions of compute capacity but are really the result of failures on or
 near the control plane.
