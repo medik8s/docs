@@ -7,7 +7,7 @@ appropriate.
 
 ## Node Healthcheck Controller
 
-The [Node Healthcheck Controller]() checks each Node's set of [NodeConditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
+The [Node Healthcheck Controller](https://github.com/medik8s/node-healthcheck-operator) checks each Node's set of [NodeConditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
 against the criteria and thresholds defined for it in [NodeHealthCheck](https://github.com/medik8s/node-healthcheck-operator#nodehealthcheck-custom-resource) CRs.
 If the Node is deemed to be in a failed state, and remediation is appropriate,
 the controller will instantiate a RemediationRequest template (defined as part
