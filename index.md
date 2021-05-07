@@ -1,3 +1,5 @@
+![medik8s logo](images/medik8s-logo.png "Medik8s Logo")
+
 ## Medik8s - High Availability for Singleton Workloads
 
 Hardware is imperfect, and software contains bugs. When node level failures such
