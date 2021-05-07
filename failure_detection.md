@@ -1,9 +1,11 @@
-## Node Healthcheck Controller
+# Failure Detection 
 
 A Node entering an unready state after 5 minutes is an obvious sign that a
 failure occurred, but depending on your physical environment, workloads, and
 tolerance for risk, there may be other criteria or thresholds that are
 appropriate.
+
+## Node Healthcheck Controller
 
 The [Node Healthcheck Controller]() checks each Node's set of [NodeConditions]()
 against the criteria and thresholds defined for it in [NodeHealthCheck]() CRs.
