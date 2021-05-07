@@ -15,7 +15,7 @@ of the CR) that specifies the mechansim/controller to be used for recovery.
 
 Should the Node recover on its own, the NH controller removes the instantiated
 RemediationRequest.  In all other respects, the RemediationRequest is owned by
-the [target remediation mechanism]() and will persist until that controller is
+the [target remediation mechanism](remediation) and will persist until that controller is
 satisfied remediation is complete.  For some mechanisms that may mean the Node
 has entered a safe state (eg. the underlying "hardware" has been deprovisioned),
 for others it may be the Node coming back online (eg. after a reboot).
