@@ -17,7 +17,7 @@ retrospecitvely is both complicated and not always possible and/or desirable.
 Additionally, physical machines can't pop into existance via an API call and
 take much longer to provision.
 
-It is therefor clear that there is no one-size-fits-all solution for
+It is therefore clear that there is no one-size-fits-all solution for
 remediation.  For this reason, the [ExternalRemediation API](https://github.com/kubernetes-sigs/cluster-api/blob/HEAD/docs/proposals/20191030-machine-health-checking.md)
 was established to allow multiple remediation mechanisms to exist, even within a
 single cluster, without creating conflicts.
