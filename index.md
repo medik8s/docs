@@ -1,4 +1,4 @@
-![medik8s logo](images/medik8s-logo.png "Medik8s Logo")
+<img src="images/medik8s-logo.png" alt="medik8s-logo" width="300"/>
 
 ## Medik8s - High Availability for Singleton Workloads
 
