@@ -6,6 +6,8 @@
 
 @media (min-width: 66.5rem) {
     .side-bar {
+        width: calc((100% - 1064px) / 2 + 264px);
         max-width: 300px;
+        min-width:264px
     }
 }
