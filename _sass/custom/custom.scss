@@ -3,3 +3,10 @@
   .side-bar, .page-header { display: none; }
   .main-content { max-width: auto; margin: 1em;}
 }
+
+@media (min-width: 66.5rem) {
+    .side-bar {
+        width: 264px
+        min-width:264px
+    }
+}
