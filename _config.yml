@@ -4,8 +4,9 @@ remote_theme: pmarsceill/just-the-docs
 
 title: Medik8s
 description: Highly Available Kubernetes
-#baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.medik8s.io" # the base hostname & protocol for your site, e.g. http://example.com
+repository: medik8s/docs
 
 logo: images/medik8s-logo.png
 
