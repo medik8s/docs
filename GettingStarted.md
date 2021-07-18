@@ -2,7 +2,7 @@
 Installation is easy and takes few minutes to get up and running.
 
 ## Install on K8S or OKD
-Go to https://operatorhub.io/operator/node-healthcheck-operator and click "Install". Follow the instructions.
+Go to [NHC in Operatorhub](https://operatorhub.io/operator/node-healthcheck-operator) and click "Install". Follow the instructions.
 
 ## Install on Openshift Container Platform
 In the OCP UI console, go to Operators > OperatorHub and search for "Node Health Check" and click "install".
