@@ -8,6 +8,10 @@ Go to [NHC in Operatorhub](https://operatorhub.io/operator/node-healthcheck-oper
 In the OCP UI console, go to Operators > OperatorHub and search for "Node Health Check" and click "install".
 After few minutes, poison-pill will be automatically installed.
 
+<video controls="true" allowfullscreen="true" width="640" height="480">
+    <source src="/images/installation.mp4" type="video/mp4">
+</video>
+
 ## Custom Configuration
 Node Healthcheck Operator and Poison Pill come with opinitated defaults to be able to function right after installation.
 You may want to tweak the configuration to match your cluster needs.
