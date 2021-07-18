@@ -21,3 +21,7 @@ kubernetes-based cluster to automate:
 * putting [nodes into a safe state](remediation),
 * allowing the scheduler to [recover affected workloads]()
 * attempting to [restore cluster capacity]()
+
+## Community
+Join [our google group](https://groups.google.com/g/medik8s) to get more info, participate in dicussions and get notified
+for new releases
