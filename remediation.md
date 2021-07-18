@@ -23,7 +23,7 @@ was established to allow multiple remediation mechanisms to exist, even within a
 single cluster, without creating conflicts.
 
 Implementations conforming to the ExternalRemediation API include:
-* [poison-pill](https://github.com/medik8s/poison-pill/) - a mechanism designed for environments without programatic access to BMC-like hardware
+* [poison-pill](/PoisonPill) - a mechanism designed for environments without programatic access to BMC-like hardware
 * [(wip) metal3](https://github.com/metal3-io/cluster-api-provider-metal3/pull/157) - a mechanism designed for bare metal clusters with a functioning Metal3 API
 * [(wip) machine](https://github.com/mshitrit/machine-deletion-remediation) - a mechanism designed for any cluster with a functioning Machine API
 * [(planned) direct]() - a mechanism designed for environments with an traditional API end-point (eg. IPMI) for power cycling cluster nodes
