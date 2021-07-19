@@ -57,6 +57,11 @@ If there's an api-server failure, which means that all nodes can't access the ap
 It would create an uncessary reboot storm in the cluster.
 ![poison-pill-api-server-failure.png](images/poison-pill-api-server-failure.png)
 
+## How Poison Pill Reboots a Node?
+We encourage users to utilize a watchdog device, which will be able to reboot the node even in the case of resource starvation or bugs that may exist.
+In nodes without a hardware wathcdog device, softdog is prefered.
+In the absence of a valid watchdog device, poison pill will use forced software reboot.
+
 ## Known Issues
 Poison Pill has several known issues:
 1. Currently only one health detection system (e.g. NHC, MHC) is supported at the same time (i.e. you can't use NHC and MHC at the same time)
