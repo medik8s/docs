@@ -1,4 +1,17 @@
-# Step 1 - Failure Detection 
+---
+layout: default
+title: Failure Detection
+nav_order: 3
+---
+
+# Detecting Node Failures 
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 A Node entering an unready state after 5 minutes is an obvious sign that a
 failure occurred, but depending on your physical environment, workloads, and
