@@ -1,4 +1,4 @@
-# 01 - Getting Started
+# Install
 Installation is easy and takes few minutes to get up and running.
 
 ## Install on K8S or OKD
