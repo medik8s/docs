@@ -1,4 +1,4 @@
-# Remediation - Poison Pill
+# Step 2 - Remediation with Poison Pill
 Poison Pill is an open-source remediation system that runs as a Daemonset - a pod per node, which reboots unhealthy nodes.
 Node Healthceck Operator (or any other operator that supports the external remediation API) will create 
 a PoisonPillRemediation CR for an unhealthy node. The Poison Pill agent will reboot once this CR exists.
