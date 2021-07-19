@@ -1,4 +1,17 @@
-## Step 2 - Putting Nodes into a Safe State (Remediation)
+---
+layout: default
+title: Recovery
+nav_order: 4
+---
+
+# Putting Nodes into a Safe State (Remediation)
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 At it's core, remediation (aka. fencing) turns a question _Can our peer cause
 data corruption?_ into an answer _no_ by isolating it both from incoming
@@ -21,6 +34,8 @@ It is therefore clear that there is no one-size-fits-all solution for
 remediation.  For this reason, the [ExternalRemediation API](https://github.com/kubernetes-sigs/cluster-api/blob/HEAD/docs/proposals/20191030-machine-health-checking.md)
 was established to allow multiple remediation mechanisms to exist, even within a
 single cluster, without creating conflicts.
+
+## Implementations
 
 Implementations conforming to the ExternalRemediation API include:
 * [poison-pill](/PoisonPill) - a mechanism designed for environments without programatic access to BMC-like hardware
