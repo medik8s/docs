@@ -13,6 +13,12 @@ nav_order: 4
 1. TOC
 {:toc}
 
+## The Problem
+
+The traditional approach to recovery is... however this no longer applies when for objects that require at-most-one semantics like StatefulSets and RWO volumes.  For that we need something different.
+
+## Remediation 
+
 At it's core, remediation (aka. fencing) turns a question _Can our peer cause
 data corruption?_ into an answer _no_ by isolating it both from incoming
 requests and persistent storage.
@@ -21,8 +27,9 @@ Only after this is achieved do we become concerned with restoring cluster
 capacity.
 
 In cloud environments, where replacing a whole machine takes seconds, the most
-common apprpoach is to use something like [Machine API](https://github.com/kubernetes-sigs/cluster-api/blob/HEAD/docs/proposals/20181121-machine-api.md) to deprovision the
-failed node and replace it with a new one.
+common apprpoach is to use something like 
+[Machine API](https://github.com/kubernetes-sigs/cluster-api/blob/HEAD/docs/proposals/20181121-machine-api.md) 
+to deprovision the failed node and replace it with a new one.
 
 However not all k8s clusters come with the Machine API configured, and adding it
 retrospecitvely is both complicated and not always possible and/or desirable.
