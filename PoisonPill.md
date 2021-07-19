@@ -1,6 +1,6 @@
 ---
 layout: default
-title: - Poison Pill
+title: Recovery with Poison Pill
 nav_order: 5
 ---
 
