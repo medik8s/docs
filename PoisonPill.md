@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Poison Pill
-nav_order: 7
+title: - Poison Pill
+nav_order: 5
 ---
 
 # Node Remediation with Poison Pill
