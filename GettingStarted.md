@@ -11,7 +11,7 @@ Installation is easy and takes few minutes to get up and running.
 Go to [NHC in Operatorhub](https://operatorhub.io/operator/node-healthcheck-operator) and click "Install". Follow the instructions.
 
 ## Install on Openshift Container Platform
-In the OCP UI console, go to Operators > OperatorHub and search for "Node Health Check" and click "install".
+In the OCP UI console, go to Operators > OperatorHub and search for `Node Health Check` and click `Install`.
 After few minutes, poison-pill will be automatically installed.
 
 <video controls="true" allowfullscreen="true" width="640" height="480">
