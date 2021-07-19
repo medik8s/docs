@@ -42,8 +42,5 @@ For this reason, the healthcheck CR includes the ability to define a percentage
 or total number of nodes that can be considered candidates for concurrent
 remediation.
 
-## Relationships to...
-
-### Machine Healthcheck Controller
-### Cluster/Machine API
-### External Remediation API
+## Background
+See the [FAQ](/FAQ)
