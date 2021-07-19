@@ -96,7 +96,7 @@ mechanisms to recover bad nodes.  Since then Ericsson has prototyped a
 [metal3](http://metal3.io/) based implementation, and we have implemented
 [Poison Pill](/PoisonPill) for shared-nothing environments.
 
-In 2021, we created of medik8s to make general purpose HA available
+In 2021, we created medik8s to make general purpose HA available
 to all kubernetes clusters, not just ones backed by an infrastructure API.
 
 The combination of Node Healthcheck and Poison Pill is currently being validated
