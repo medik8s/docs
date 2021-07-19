@@ -1,4 +1,4 @@
-## Step 2 - Remediation: Putting Nodes into a Safe State
+## Step 2 - Putting Nodes into a Safe State (Remediation)
 
 At it's core, remediation (aka. fencing) turns a question _Can our peer cause
 data corruption?_ into an answer _no_ by isolating it both from incoming
