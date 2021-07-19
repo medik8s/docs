@@ -1,4 +1,4 @@
-# Failure Detection 
+# Step 1 - Failure Detection 
 
 A Node entering an unready state after 5 minutes is an obvious sign that a
 failure occurred, but depending on your physical environment, workloads, and
