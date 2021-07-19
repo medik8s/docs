@@ -10,7 +10,7 @@ To preview the page locally, run
 ```shell
 export JEKYLL_VERSION=3.8
 docker run --rm \
-  --volume="$PWD:/srv/jekyll" \
+  --volume="$PWD:/srv/jekyll:Z" \
   -p 4000:4000 \
   -it jekyll/builder:$JEKYLL_VERSION \
   bash -c "bundle && jekyll serve"
