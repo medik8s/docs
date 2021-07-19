@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+nav_order: 1
+---
+
 <img src="images/medik8s-logo.png" alt="medik8s-logo" width="300"/>
 
 ## Medik8s - High Availability for Singleton Workloads
