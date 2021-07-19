@@ -27,7 +27,11 @@ run on any kubernetes cluster.
 No.  While Medik8s can take advantage of hardware watchdogs and/or BMCs, it also
 has options for shared-nothing recovery.
 
-## What is the relationships to sig-cluster
+## How can I get involved?
+
+Reach out to the [google group](https://groups.google.com/g/medik8s) or submit a PR to one of the [medki8s projects](https://github.com/medik8s/).
+
+## What is the relationships to sig-cluster?
 
 The medik8s team has worked with the [sig-cluster community](https://github.com/kubernetes/community/tree/master/sig-cluster-lifecycle) for many years.
 While we have many things in common, they are naturally focussed on furthering
