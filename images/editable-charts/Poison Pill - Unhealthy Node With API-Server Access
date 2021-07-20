@@ -1,0 +1,24 @@
+title Poison Pill - Unhealthy Node with API-Server Access
+
+
+participant Node A
+
+participant API server
+
+participant NHC
+
+participant Node B
+
+Node A->API server: am I healthy?
+API server->Node A: Yes
+note over Node A: No-Op
+NHC->API server:Node A is unhealthy
+API server-->Node B: Node A is Unhealthy
+Node B->API server: Mark node A as unschedulable
+Node A->API server:am I healthy?
+API server->Node A: No
+note over Node A: reboot
+Node B->API server: delete Node A
+note over API server:rescheduling node A's workloads
+Node B->API server: restore node A
+note over API server: schedule pods on worker A
