@@ -71,6 +71,26 @@ If the other nodes can’t access the api-server as-well, we assume this is an a
 ## What actions are taken by the healthy nodes once there’s an unhealthy node?
 The nodes will mark the unhealthy node as unschedulable, backup the node resource in the PPR (PoisonPillRemediation) so we can restore the node later, and delete the node object which signals to the cluster that the workloads can be safely rescheduled elsewhere.
 
+## Why does Poison Pill restore the node? Why are we not doing it in power-based remediation?
+In power based remediation we delete the node once the host is powered off. Once the host is powered on again, it would register itself in the cluster.
+In Poison Pill, we can’t keep the host powered off (we don’t have BMC credentials/access), so the node is deleted when the unhealthy node is powered-on. Kubelet will only register itself when it boots. So once the node is deleted, it will never come back unless we restore it.
+the flow is:
+1. node x becomes unhealthy
+2. node x reboots
+3. node x boots, the node object already exists in the cluster (nothing deleted it at this point)
+4. other node deletes the unhealthy node
+
+## What are the Poison PIll CRDs and what’s their purpose?
+Poison Pill has 3 CRDs:
+PoisonPillConfig - automatically created by the operator. Contains configuration for the poison pill daemonset, and can be modified by the user.
+PoisonPillRemediation - the health detection system (e.g. MHC/NHC) should create instance of this CR to signal that a node/machine is unhealthy)
+PoisonPillRemediationTemplate - automatically created by the operator and should be referenced in the [M|N]HC CR. This is currently empty but we might be used to pass some remediation configuration.
+
+## Does Poison Pill work on its own as a standalone operator?
+Poison Pill is a remediation/fencing system. It doesn’t provide any health detection system.
+Poison pill is a consumer of the external remediation api, and responds to health issues reported by that API.
+Note that in the case of a node that can’t contact any of the nodes, the poison pill will trigger remediation without relying on any health detection system.
+
 ## Known Issues
 Poison Pill has several known issues:
 1. Currently only one health detection system (e.g. NHC, MHC) is supported at the same time (i.e. you can't use NHC and MHC at the same time)
