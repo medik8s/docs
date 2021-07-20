@@ -97,8 +97,8 @@ Healthcheck Controllers.
 
 ## Is a company behind this?
 
-The medik8s team is employed at Red Hat, where we leverage 20 years of
-traditional HA experience to create similar kubernetes native capabilities for
+The medik8s team is employed at Red Hat, where we leverage 20 years of personal
+experience creating HA architectures to create a kubernetes-native HA experience for
 workloads such as Stateful sets and RWO Volumes.
 
 ## History
