@@ -1,0 +1,20 @@
+title Poison Pill - Isolated Node
+
+participant Node A
+
+participant API server
+
+participant Node B
+
+participant Node C
+
+
+Node A->API server: am I healthy?
+API server-->Node A: No Response
+note over Node A: Check with peers
+Node A->Node B:am I healthy?
+Node B-->Node A: No Response
+Node A->Node C:am I healthy?
+Node C-->Node A: No Response
+note over Node A:couldn't contact other nodes
+note over Node A: reboot

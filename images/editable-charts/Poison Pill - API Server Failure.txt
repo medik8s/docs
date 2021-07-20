@@ -1,0 +1,24 @@
+title Poison Pill - API Server Failure
+
+participant Node A
+
+participant API server
+
+participant Node B
+
+participant Node C
+
+
+Node A->API server: am I healthy?
+API server-->Node A: No Response
+note over Node A: Check with peers
+Node A->Node B:am I healthy?
+Node B->API server:Is Node A healthy?
+API server-->Node B:No Response
+Node B->Node A: Couldn't Contact API Server
+Node A->Node C:am I healthy?
+Node C->API server:Is Node A healthy?
+API server-->Node C:No Response
+Node C->Node A: Couldn't Contact API Server
+note over Node A:All nodes couldn't contact api-server
+note over Node A: No-Op
