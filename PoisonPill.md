@@ -84,7 +84,7 @@ the flow is:
 Poison Pill has 3 CRDs:
 * PoisonPillConfig - automatically created by the operator. Contains configuration for the poison pill daemonset, and can be modified by the user.
 * PoisonPillRemediation - the health detection system (e.g. MHC/NHC) should create instance of this CR to signal that a node/machine is unhealthy.
-* PoisonPillRemediationTemplate - automatically created by the operator and should be referenced in the [M|N]HC CR. This is currently empty but we might be used to pass some remediation configuration.
+* PoisonPillRemediationTemplate - automatically created by the operator and should be referenced in the MHC/NHC CR. This is currently empty but we might be used to pass some remediation configuration.
 
 ## Does Poison Pill work on its own as a standalone operator?
 Poison Pill is a remediation/fencing system. It doesn’t provide any health detection system.
