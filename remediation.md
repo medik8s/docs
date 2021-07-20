@@ -15,9 +15,15 @@ nav_order: 4
 
 ## The Problem
 
-The traditional approach to recovery is... however this no longer applies when for objects that require at-most-one semantics like StatefulSets and RWO volumes.  For that we need something different.
+A common approach to for providing high availabilty for Kubernetes is to run
+multiple copies of a service and starting replacements when any fail.  However
+this approach cannot be applied for objects that require at-most-one semantics
+like StatefulSets and RWO volumes.  Before we ask the scheduler to recover those
+kinds of resources elsewhere, we must be certain that the "old" location not
+only looks dead/down and not running them, but *is definitely* dead/down and not
+running them.
 
-## Remediation 
+## Remediation
 
 At it's core, remediation (aka. fencing) turns a question _Can our peer cause
 data corruption?_ into an answer _no_ by isolating it both from incoming
