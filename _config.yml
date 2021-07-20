@@ -3,7 +3,7 @@
 remote_theme: pmarsceill/just-the-docs
 
 title: Medik8s
-description: Highly Available Kubernetes
+description: Highly Available Workloads for Kubernetes 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.medik8s.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository: medik8s/docs
