@@ -62,6 +62,12 @@ We encourage users to utilize a watchdog device, which will be able to reboot th
 In nodes without a hardware wathcdog device, softdog is prefered.
 In the absence of a valid watchdog device, poison pill will use forced software reboot.
 
+## Why does Poison Pill contact other nodes?
+In the case of issues which prevent getting responses from the api-server, there’s no way for the poison-pill agent to know if it’s healthy or not.
+If we would have ignored this situation, the other nodes could assume the unhealthy node has been rebooted and delete the node while it’s still running.
+To overcome this, the node queries the other nodes and uses them as a proxy to the api-server, so they can tell if it’s healthy or not.
+If the other nodes can’t access the api-server as-well, we assume this is an api-server failure and do no nothing.
+
 ## Known Issues
 Poison Pill has several known issues:
 1. Currently only one health detection system (e.g. NHC, MHC) is supported at the same time (i.e. you can't use NHC and MHC at the same time)
