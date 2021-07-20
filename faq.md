@@ -13,7 +13,7 @@ nav_order: 9
 1. TOC
 {:toc}
 
-## How do I pronounce Medik8s
+## How do I pronounce Medik8s?
 
 Medik8s is intended to be a playful misspelling of the English word "medicates" and is pronouced the same way.
 
