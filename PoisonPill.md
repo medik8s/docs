@@ -68,6 +68,9 @@ If we would have ignored this situation, the other nodes could assume the unheal
 To overcome this, the node queries the other nodes and uses them as a proxy to the api-server, so they can tell if it’s healthy or not.
 If the other nodes can’t access the api-server as-well, we assume this is an api-server failure and do no nothing.
 
+## What actions are taken by the healthy nodes once there’s an unhealthy node?
+The nodes will mark the unhealthy node as unschedulable, backup the node resource in the PPR (PoisonPillRemediation) so we can restore the node later, and delete the node object which signals to the cluster that the workloads can be safely rescheduled elsewhere.
+
 ## Known Issues
 Poison Pill has several known issues:
 1. Currently only one health detection system (e.g. NHC, MHC) is supported at the same time (i.e. you can't use NHC and MHC at the same time)
