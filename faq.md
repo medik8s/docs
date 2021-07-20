@@ -13,6 +13,10 @@ nav_order: 9
 1. TOC
 {:toc}
 
+## How do I pronounce Medik8s
+
+Medik8s is intended to be a playful misspelling of the English word "medicates" and is pronouced the same way.
+
 ## Does medik8s require OpenShift?
 
 No.  Medik8s can run on any kubernetes cluster.
@@ -26,6 +30,25 @@ run on any kubernetes cluster.
 
 No.  While Medik8s can take advantage of hardware watchdogs and/or BMCs, it also
 has options for shared-nothing recovery.
+
+## Do all nodes need to be treated the same?
+
+No.  The Node Healthcheck configuration includes a node selector, so you can
+treat the control plane differently to workers, and have pools of workers with
+different conditions and threasholds to provide a variety of SLAs.
+
+## Can I create my own definition of what counts as a healthy node?
+
+Yes.  Node Healthcheck determines node health based on NodeConditions.  There
+are a set of basic conditions built into Kubernetes, but additional conditions
+can be defined and then referenced by Node Healthcheck.  Node Problem Detector
+is a common tool for creating and updating NodeConditions based on log scraping.
+
+## Can I create my mechansim for recovering a node?
+
+Yes.  Node Healthcheck uses the sig-cluster's [External Remediation API](https://github.com/kubernetes-sigs/cluster-api/blob/master/docs/proposals/20191030-machine-health-checking.md#external-remediation)
+to uniquely associate a node failure with a specific recovery mechanism of 
+your choosing. 
 
 ## How can I get involved?
 
