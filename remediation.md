@@ -20,13 +20,13 @@ multiple copies of a service and starting replacements when any fail.  However
 this approach cannot be applied for objects that require at-most-one semantics
 like StatefulSets and RWO volumes.  Before we ask the scheduler to recover those
 kinds of resources elsewhere, we must be certain that the "old" location not
-only looks dead/down and not running them, but *is definitely* dead/down and not
+only looks dead/down and not running them, but **is definitely** dead/down and not
 running them.
 
 ## Remediation
 
 At it's core, remediation (aka. fencing) turns a question _Can our peer cause
-data corruption?_ into an answer _no_ by isolating it both from incoming
+data corruption?_ into an answer _**No!**_ by isolating it both from incoming
 requests and persistent storage.
 
 Only after this is achieved do we become concerned with restoring cluster
