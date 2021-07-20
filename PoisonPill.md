@@ -80,7 +80,7 @@ the flow is:
 3. node x boots, the node object already exists in the cluster (nothing deleted it at this point)
 4. other node deletes the unhealthy node
 
-## What are the Poison PIll CRDs and what’s their purpose?
+## What are the Poison Pill CRDs and what’s their purpose?
 Poison Pill has 3 CRDs:
 PoisonPillConfig - automatically created by the operator. Contains configuration for the poison pill daemonset, and can be modified by the user.
 PoisonPillRemediation - the health detection system (e.g. MHC/NHC) should create instance of this CR to signal that a node/machine is unhealthy)
