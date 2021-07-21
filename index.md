@@ -4,7 +4,7 @@ title: Home
 nav_order: 1
 ---
 
-<img src="images/medik8s-logo.png" alt="medik8s-logo" width="300"/>
+<img src="images/medik8s-logo.png" alt="medik8s-logo" width="300" style="margin-left: auto; marign-right:auto; display:block"/>
 
 ## Medik8s - High Availability for Singleton Workloads
 
