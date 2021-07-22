@@ -4,9 +4,16 @@ title: Home
 nav_order: 1
 ---
 
-<img src="images/medik8s-logo.png" alt="medik8s-logo" width="300" style="margin-left: auto; marign-right:auto; display:block"/>
+<img src="images/medik8s-logo.png" alt="medik8s-logo" width="300" style="margin-left:auto; margin-right:auto; display:block"/>
 
-## Medik8s - High Availability for Singleton Workloads
+# Medik8s - Kubernetes Node Remediation
+{: .fs-8 }
+
+Medik8s is a project consists of several kubernetes operators that provide automatic node remediation and high availability for singleton workloads
+{: .fs-6 .fw-300 }
+
+
+[Get started now](/GettingStarted){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 Hardware is imperfect, and software contains bugs. When node level failures such
 as kernel hangs or dead NICs occur, the work required from the cluster does not
