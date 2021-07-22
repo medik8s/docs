@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Recovery with Poison Pill
-nav_order: 5
+title: Poison Pill
+nav_order: 4
+has_children: true
+parent: Remediation
 ---
 
 # Node Remediation with Poison Pill

@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Recovery
+title: Remediation
 nav_order: 4
+has_children: true
 ---
 
 # Putting Nodes into a Safe State (Remediation)
