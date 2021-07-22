@@ -25,7 +25,7 @@ workloads, Medik8s presents a collection of projects that can be installed on an
 kubernetes-based cluster to automate:
 * the [detection of failures](failure_detection),
 * putting [nodes into a safe state](remediation),
-* allowing the scheduler to [recover affected workloads]()
+* allowing the scheduler to [recover affected workloads](recover_affected_workloads)
 * attempting to [restore cluster capacity]()
 
 ## Community
