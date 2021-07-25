@@ -6,6 +6,15 @@ grand_parent: Remediation
 nav_order: 2
 ---
 
+# Frequently Asked Questions
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 ## How Poison Pill Reboots a Node?
 We encourage users to utilize a watchdog device, which will be able to reboot the node even in the case of resource starvation or bugs that may exist.
 In nodes without a hardware wathcdog device, softdog is prefered.
