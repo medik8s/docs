@@ -29,6 +29,8 @@ In addition, check the logs of the poison pill agents. You should check the logs
 ## Poison Pill daemonset still exists after operator uninstall
 This is a known issue, and you should manually delete the poison pill config CR to get it deleted.
 
+## How do I get community support?
+Feel free to reach out in our [medik8s google group](https://groups.google.com/g/medik8s)
 
 
 
