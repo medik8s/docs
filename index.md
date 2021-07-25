@@ -43,5 +43,5 @@ for new releases
 function openRemediationMenu(){
   document.getElementsByClassName("nav-list-item")[3].classList.add("active")
  }
-body.addEventListener("load", openRemediationMenu(), false);
+document.body.addEventListener("load", openRemediationMenu(), false);
 </script>
