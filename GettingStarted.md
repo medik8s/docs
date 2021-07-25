@@ -23,4 +23,5 @@ Node Healthcheck Operator includes a dependancy on [Poison Pill](/PoisonPill) wi
 You may want to tweak the configuration of both, or install one of the [alternatives to Poison Pill](/remediation/#implementations) in order to match your cluster needs.
 
 To tweak NHC configuration see [NHC's README](https://github.com/medik8s/node-healthcheck-operator/blob/master/docs/README.md)
+
 To change the default Poison Pill configuration, see [Poison Pill Configuration](/remediation/poison-pill/configuration/) page
