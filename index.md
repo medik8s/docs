@@ -31,7 +31,7 @@ to confirm the node's true status. In order to automate the recovery of exclusiv
 workloads, Medik8s presents a collection of projects that can be installed on any
 kubernetes-based cluster to automate:
 * the [detection of failures](failure_detection),
-* putting [nodes into a safe state](remediation),
+* putting [nodes into a safe state](/remediation/remediation),
 * allowing the scheduler to [recover affected workloads](recover_affected_workloads)
 * attempting to [restore cluster capacity]()
 
