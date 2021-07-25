@@ -38,3 +38,10 @@ kubernetes-based cluster to automate:
 ## Community
 Join [our google group](https://groups.google.com/g/medik8s) to get more info, participate in dicussions and get notified
 for new releases
+
+<script type="text/javascript">
+function openRemediationMenu(){
+  document.getElementsByClassName("nav-list-item")[3].classList.add("active")
+ }
+body.addEventListener("load", openRemediationMenu(), false);
+</script>
