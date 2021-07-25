@@ -52,7 +52,7 @@ single cluster, without creating conflicts.
 ## Implementations
 
 Implementations conforming to the ExternalRemediation API include:
-* [poison-pill](/PoisonPill) - a mechanism designed for shared-nothing environments without programatic access to BMC-like hardware
+* [poison-pill](/remediation/poison-pill/poison-pill/) - a mechanism designed for shared-nothing environments without programatic access to BMC-like hardware
 * [(wip) metal3](https://github.com/metal3-io/cluster-api-provider-metal3/pull/157) - a mechanism designed for bare metal clusters with a functioning Metal3 API
 * [(wip) machine](https://github.com/medik8s/machine-deletion-remediation) - a mechanism designed for any cluster with a functioning Machine API
 * [(planned) direct]() - a mechanism designed around an existing set of [upstream fencing agents](https://github.com/ClusterLabs/fence-agents) for environments with an traditional API end-point (eg. IPMI) for power cycling cluster nodes
