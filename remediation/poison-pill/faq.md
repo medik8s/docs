@@ -2,7 +2,7 @@
 layout: default
 title: FAQ
 parent: Poison Pill
-grand_parent: Isolating Nodes
+grand_parent: Remediation
 nav_order: 2
 ---
 
