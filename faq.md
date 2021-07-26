@@ -122,6 +122,9 @@ mechanisms to recover bad nodes.  Since then Ericsson has prototyped a
 In 2021, we created medik8s to make general purpose HA available
 to all kubernetes clusters, not just ones backed by an infrastructure API.
 
-The combination of Node Healthcheck and Poison Pill is currently being validated
+### Current Status
+
+Additional remediation mechanisms are still a work in progress, however the
+combination of Node Healthcheck and Poison Pill is currently being validated
 for production deployments and is expected to be live in a large cluster at a
 Fortune ranked customer by the end of the year.
