@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Making Nodes Safe
+title: Isolating Nodes
 nav_order: 4
 has_children: true
 ---
