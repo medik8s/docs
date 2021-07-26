@@ -3,7 +3,7 @@ layout: default
 title: Poison Pill
 nav_order: 1
 has_children: true
-parent: Isolating Nodes
+parent: Remediation
 ---
 
 # Node Remediation with Poison Pill
