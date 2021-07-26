@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Isolating Nodes
+title: Remediation
 nav_order: 4
 has_children: true
 ---
