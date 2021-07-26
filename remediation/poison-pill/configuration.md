@@ -2,7 +2,7 @@
 layout: default
 title: Configuration
 parent: Poison Pill
-grand_parent: Remediation
+grand_parent: Isolating Nodes
 nav_order: 2
 ---
 
