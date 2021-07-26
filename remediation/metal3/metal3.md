@@ -3,7 +3,7 @@ layout: default
 title: Metal3
 nav_order: 2
 has_children: false
-parent: Isolating Nodes
+parent: Remediation
 ---
 
 # Metal3 Power Based Remediation
