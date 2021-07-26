@@ -1,4 +1,10 @@
-# Recover Affected Workloads
+---
+layout: default
+title: Workload Recovery
+nav_order: 8
+---
+
+# Recovering Affected Workloads
 
 In kubernetes world there is no concept of rescheduling. When pods are bounded to a
 node they run till termination. In a case of hardware failure, or some other
