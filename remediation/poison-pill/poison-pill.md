@@ -7,6 +7,8 @@ parent: Remediation
 ---
 
 # Node Remediation with Poison Pill
+Generally Available
+{: .label }
 
 Poison Pill is an open-source remediation system that runs as a Daemonset - a pod per node, which reboots unhealthy nodes.
 `Node Healthceck Operator` (or any other operator that supports the external remediation API) will create 
