@@ -31,6 +31,9 @@ run on any kubernetes cluster.
 No.  While Medik8s can take advantage of hardware watchdogs and/or BMCs, it also
 has options for shared-nothing recovery.
 
+## Does medik8s work on bare metal only?
+No. medik8s operators can work on any platform, unless specified otherwise by a specific remediator.
+
 ## Do all nodes need to be treated the same?
 
 No.  The Node Healthcheck configuration includes a node selector, so you can
