@@ -20,5 +20,5 @@ There are some key differences between the metal3 based remediator and Poison Pi
 The metal3 project requires a valid BMC credentials, and remediation requires a working access of the BMC API, while the node is unhealthy.
 The BMC API might be down for several reasons, e.g. power issues, which prevents remediation and workload recovery.
 
-The Poison Pill Operator doesn't require any BMC credntials/access but relies on some heuristics. The metal3 power based remediation is more robust and determinstic.
+The Poison Pill Operator doesn't require any BMC credentials/access but relies on some heuristics. The metal3 power based remediation is more robust and determinstic.
 
