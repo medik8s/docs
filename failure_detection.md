@@ -30,8 +30,8 @@ Should the Node recover on its own, the NH controller removes the instantiated
 RemediationRequest.  In all other respects, the RemediationRequest is owned by
 the [target remediation mechanism](/remediation/remediation) and will persist until that controller is
 satisfied remediation is complete.  For some mechanisms that may mean the Node
-has entered a safe state (eg. the underlying "hardware" has been deprovisioned),
-for others it may be the Node coming back online (eg. after a reboot).
+has entered a safe state (e.g. the underlying "hardware" has been deprovisioned),
+and for others it may be the Node coming back online (eg. after a reboot).
 
 Remediation is not always the correct response to a failure.  Especially in
 larger clusters, we want to protect against failures that appear to take out
