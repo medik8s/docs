@@ -42,7 +42,7 @@ different conditions and threasholds to provide a variety of SLAs.
 
 ## Can I create my own definition of what counts as a healthy node?
 
-Yes.  Node Healthcheck determines node health based on NodeConditions.  There
+Yes.  Node Healthcheck determines node health based on [NodeConditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition).  There
 are a set of basic conditions built into Kubernetes, but additional conditions
 can be defined and then referenced by Node Healthcheck.  Node Problem Detector
 is a common tool for creating and updating NodeConditions based on log scraping.
