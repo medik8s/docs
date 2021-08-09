@@ -24,7 +24,7 @@ In the absence of a valid watchdog device, poison pill will use forced software 
 In the case of issues which prevent getting responses from the api-server, there’s no way for the poison-pill agent to know if it’s healthy or not.
 If we would have ignored this situation, the other nodes could assume the unhealthy node has been rebooted and delete the node while it’s still running.
 To overcome this, the node queries the other nodes and uses them as a proxy to the api-server, so they can tell if it’s healthy or not.
-If the other nodes can’t access the api-server as-well, we assume this is an api-server failure and do no nothing.
+If the other nodes can’t access the api-server as-well, we assume this is an api-server failure and do nothing.
 
 ## What actions are taken by the healthy nodes once there’s an unhealthy node?
 The nodes will mark the unhealthy node as unschedulable, backup the node resource in the PPR (PoisonPillRemediation) so we can restore the node later, and delete the node object which signals to the cluster that the workloads can be safely rescheduled elsewhere.
