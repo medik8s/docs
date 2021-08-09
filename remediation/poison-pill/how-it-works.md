@@ -10,7 +10,7 @@ nav_order: 1
 
 Poison Pill is a consumer of the external remediation API. It was tested with Node Healthcheck Operator which creates a PoisonPillRemediation CR once a node turns unhealthy.
 Poison Pill reboots unheatlhy nodes, and the other healthy nodes are cordoning it, and letting the cluster know it can reschedule the workload elsewhere.
-There are four main cases.
+There are four main cases:
 
 ## A Node with API-Server Access
 When node has api-server access it can easily detect if NHC declared it as healthy or not:
