@@ -50,13 +50,13 @@ Poison pill is a consumer of the external remediation API, and responds to healt
 Note that in the case of a node that can’t contact any of the nodes, the poison pill will trigger remediation without relying on any health detection system.
 
 ## How Poison Pill is Different from Other Solutions?
-The existing remediation solutions have some limitations, assumptions or pre-requisites that do not apply to Poison Pill:
+The existing remediation solutions have some limitations, assumptions or prerequisites that do not apply to Poison Pill:
 
 * The unhealthy node should be able to contact the API-Server
 * The cluster should have been provisioned with some way to interact with the infrastrcture provider (such as Cluster-API Machines)
 * The control plane should have connectivity to the unhealthy node's management interface
 
-Poison Pill doesn't have any of this limitations and has no pre-requisites
+Poison Pill doesn't have any of this limitations and has no prerequisites
 
 ## Where Can I Find the Source Code?
 Poison Pill is open source: [Github Repo](https://github.com/medik8s/poison-pill)
