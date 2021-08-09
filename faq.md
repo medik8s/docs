@@ -74,7 +74,7 @@ API](https://github.com/kubernetes-sigs/cluster-api/blob/HEAD/docs/proposals/201
 for recovery.  Node Healthcheck Controller can use the Machine API if it is
 available, but also supports other mechanisms.
 
-### What is the connection to Machine Healthcheck Controller?
+## What is the connection to Machine Healthcheck Controller?
 
 Apart from the medik8s team being actively involved with the [Machine
 Healthcheck
@@ -87,7 +87,7 @@ The primary difference between the two implementations is putting Nodes at the
 center of failure detection to avoid a dependancy on `Machine` objects, which
 are not common to all kubernetes installations.
 
-### What is the Relationships to External Remediation API?
+## What is the Relationships to External Remediation API?
 
 The original MHC implementation assumed that using the Machine API to destroy
 the bad node and replace it with a new one was the only necessary recovery
