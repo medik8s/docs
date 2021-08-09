@@ -28,9 +28,11 @@ A node might lose any connectivity to other entities. In this case, the node can
 Since the other healthy nodes would like to fence the node, and let the scheduler move the workloads to other nodes, they need to delete the node object from the cluster.
 This must be done only when the unhealthy node is no longer running any workloads, otherwise it would be a violation of the run-once semantics of some applications.
 The healthy nodes will assume the unhealthy node has been rebooted after some safe, finite timeout that the unhealthy node was expected to ask all other nodes, fail, and reboot.
+
 ![poison-pill-api-isolated-node](../../images/poison-pill-api-isolated-node.png)
 
 ## An API-server failure
 If there's an api-server failure, which means that all nodes can't access the api-server, we don't want to reboot.
 It would create an uncessary reboot storm in the cluster.
+
 ![poison-pill-api-server-failure.png](../../images/poison-pill-api-server-failure.png)
