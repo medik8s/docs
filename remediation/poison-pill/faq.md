@@ -31,12 +31,12 @@ The nodes will mark the unhealthy node as unschedulable, backup the node resourc
 
 ## Why does Poison Pill restore the node? Why are we not doing it in power-based remediation?
 In power based remediation we delete the node once the host is powered off. Once the host is powered on again, it would register itself in the cluster.
-In Poison Pill, we can’t keep the host powered off (we don’t have BMC credentials/access), so the node is deleted when the unhealthy node is powered-on. Kubelet will only register itself when it boots. So once the node is deleted, it will never come back unless we restore it.
-the flow is:
-1. node x becomes unhealthy
-2. node x reboots
-3. node x boots, the node object already exists in the cluster (nothing deleted it at this point)
-4. other node deletes the unhealthy node
+In Poison Pill, we can’t keep the host powered off (we don’t have [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) credentials/access), so the node is deleted when the unhealthy node is powered-on. Kubelet will only register itself when it boots. So once the node is deleted, it will never come back unless we restore it.
+The unhealthy life-cycle flow can be described as follows:
+1. Node x becomes unhealthy.
+2. Node x reboots.
+3. Node x boots, the node object already exists in the cluster (nothing deleted it at this point).
+4. Other node deletes the unhealthy node.
 
 ## What are the Poison Pill CRDs and what’s their purpose?
 Poison Pill has 3 CRDs:
