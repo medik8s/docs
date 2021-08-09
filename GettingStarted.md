@@ -20,7 +20,7 @@ After few minutes, poison-pill will be automatically installed.
 
 ## Custom Configuration
 Node Healthcheck Operator includes a dependancy on [Poison Pill](/PoisonPill) with opinionated defaults to be able to function right after installation.
-You may want to tweak the configuration of both, or install one of the [alternatives to Poison Pill](/remediation/#implementations) in order to match your cluster needs.
+You may want to tweak the configuration of both, or install one of the [alternatives to Poison Pill](/remediation/remediation/#implementations) in order to match your cluster needs.
 
 To tweak NHC configuration see [NHC's README](https://github.com/medik8s/node-healthcheck-operator/blob/master/docs/README.md)
 
