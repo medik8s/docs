@@ -19,7 +19,7 @@ When a node has api-server access it can easily detect if NHC declared it as hea
 
 ## A Node without API-Server Access
 When a node loses api-server access it can't check if it's healthy or not (i.e. to check if PoisonPillRemediation CR exists for it).
-The node will ask its peers if they can access the api-server on behalfo of it, to check if it's healthy.
+The node will ask its peers if they can access the api-server on behalf of it, to check if it's healthy.
 
 ![poison-pill-node-without-api-server-acess](../../images/poison-pill-node-without-api-server-acess.png)
 
