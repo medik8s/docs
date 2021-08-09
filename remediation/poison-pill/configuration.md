@@ -14,6 +14,6 @@ Currently there are two configuration fields:
 2. Safe timeout - Poison Pill needs to assume the timeout that a unhealthy node has been rebooted. Poison Pill automatically calculates the lower bound for this value, but it can and should be changed to an upper value, in case of non-homogenous hardware where different nodes have different watchdog timeout.
 
 The `PoisonPillConfig` CR will be created at the same namespace of the operator, with the name `poison-pill-config`.
-A user may edit this CR but not creating a new one.
+A user may edit this CR but not create a new one.
 
 Any change the `PoisonPillConfig` CR will lead to re-creation of the Poison Pill daemonset.
