@@ -93,8 +93,8 @@ The original MHC implementation assumed that using the Machine API to destroy
 the bad node and replace it with a new one was the only necessary recovery
 mechanism.
 
-The medik8s team partnered with Ericsson to convince the sig-cluster community
-that other mechanisms were needed (particularly on bare metal) and together we
+The medik8s team have partnered with Ericsson to convince the sig-cluster community
+that other mechanisms have been needed (particularly on bare metal), and together we have
 created the External Remediation API that is used by both the Machine and Node
 Healthcheck Controllers.
 
