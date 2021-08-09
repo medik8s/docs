@@ -46,7 +46,7 @@ Poison Pill has 3 CRDs:
 
 ## Does Poison Pill work on its own as a standalone operator?
 Poison Pill is a remediation/fencing system. It doesn’t provide any health detection system.
-Poison pill is a consumer of the external remediation api, and responds to health issues reported by that API.
+Poison pill is a consumer of the external remediation API, and responds to health issues reported by that API.
 Note that in the case of a node that can’t contact any of the nodes, the poison pill will trigger remediation without relying on any health detection system.
 
 ## How Poison Pill is Different from Other Solutions?
