@@ -13,7 +13,7 @@ Poison Pill reboots unheatlhy nodes, and the other healthy nodes are cordoning i
 There are four main cases:
 
 ## A Node with API-Server Access
-When node has api-server access it can easily detect if NHC declared it as healthy or not:
+When a node has api-server access it can easily detect if NHC declared it as healthy or not:
 
 ![poison-pill-node-with-api-server-acess](../../images/poison-pill-with-api-server-access.png)
 
