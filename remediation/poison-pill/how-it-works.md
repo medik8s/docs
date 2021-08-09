@@ -8,7 +8,7 @@ nav_order: 1
 
 # How Poison Pill Works?
 
-Poison Pill is a consumer of the external remediation API. It was tested with Node Healthcheck Operator which creates a PoisonPillRemediation CR once a node turns unhealthy.
+Poison Pill is a consumer of the external remediation API. It was tested with Node Healthcheck Operator (NHC) which creates a PoisonPillRemediation CR once a node turns unhealthy.
 Poison Pill reboots unheatlhy nodes, and the other healthy nodes are cordoning it, and letting the cluster know it can reschedule the workload elsewhere.
 There are four main cases:
 
