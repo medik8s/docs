@@ -16,4 +16,4 @@ Currently there are two configuration fields:
 The `PoisonPillConfig` CR will be created at the same namespace of the operator, with the name `poison-pill-config`.
 A user may edit this CR but not create a new one.
 
-Any change the `PoisonPillConfig` CR will lead to re-creation of the Poison Pill daemonset.
+Any change to the `PoisonPillConfig` CR will result in re-creation of the Poison Pill daemonset.
