@@ -6,15 +6,15 @@ nav_order: 3
 
 # Detecting Node Failures 
 {: .no_toc }
-
+<!-- 
 ## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+{:toc} -->
 
 A Node entering an unready state after 5 minutes is an obvious sign that a
-failure occurred, but depending on your physical environment, workloads, and
+failure occurred. Depending on your physical environment, workloads, and
 tolerance for risk, there may be other criteria or thresholds that are
 appropriate.
 
@@ -43,4 +43,4 @@ or total number of nodes that can be considered candidates for concurrent
 remediation.
 
 ## Background
-See the [FAQ](/faq)
+See the [FAQ](/faq).
