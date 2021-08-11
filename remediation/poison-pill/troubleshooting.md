@@ -3,7 +3,7 @@ layout: default
 title: Troubleshooting
 parent: Poison Pill
 grand_parent: Remediation
-nav_order: 4
+nav_order: 5
 ---
 
 # Poison Pill Troubleshooting
