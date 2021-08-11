@@ -24,7 +24,7 @@ The [Node Healthcheck Controller](https://github.com/medik8s/node-healthcheck-op
 against the criteria and thresholds defined for it in [NodeHealthCheck](https://github.com/medik8s/node-healthcheck-operator#nodehealthcheck-custom-resource) CRs.
 If the Node is deemed to be in a failed state, and remediation is appropriate,
 the controller will instantiate a RemediationRequest template (defined as part
-of the CR) that specifies the mechansim/controller to be used for recovery.
+of the CR) that specifies the mechanism/controller to be used for recovery.
 
 Should the Node recover on its own, the NH controller removes the instantiated
 RemediationRequest.  In all other respects, the RemediationRequest is owned by
