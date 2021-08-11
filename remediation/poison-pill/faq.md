@@ -17,7 +17,7 @@ nav_order: 2
 
 ## How Poison Pill Reboots a Node?
 We encourage users to utilize a watchdog device, which will be able to reboot the node even in the case of resource starvation or bugs that may exist.
-In nodes without a hardware wathcdog device, softdog is prefered.
+In nodes without a hardware wathcdog device, softdog is preferred.
 In the absence of a valid watchdog device, poison pill will use forced software reboot.
 
 ## Why does Poison Pill contact other nodes?
@@ -53,10 +53,10 @@ Note that in the case of a node that can’t contact any of the nodes, the poiso
 The existing remediation solutions have some limitations, assumptions or prerequisites that do not apply to Poison Pill:
 
 * The unhealthy node should be able to contact the API-Server
-* The cluster should have been provisioned with some way to interact with the infrastrcture provider (such as Cluster-API Machines)
+* The cluster should have been provisioned with some way to interact with the infrastructure provider (such as Cluster-API Machines)
 * The control plane should have connectivity to the unhealthy node's management interface
 
-Poison Pill doesn't have any of this limitations and has no prerequisites
+Poison Pill doesn't have any of these limitations and has no prerequisites
 
 ## Where Can I Find the Source Code?
 Poison Pill is open source: [Github Repo](https://github.com/medik8s/poison-pill)

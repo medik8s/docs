@@ -16,7 +16,7 @@ has_children: true
 
 ## The Problem
 
-A common approach to for providing high availabilty for Kubernetes is to run
+A common approach to for providing high availability for Kubernetes is to run
 multiple copies of a service and starting replacements when any fail.  However
 this approach cannot be applied for objects that require at-most-one semantics
 like StatefulSets and RWO volumes.  Before we ask the scheduler to recover those
@@ -39,9 +39,9 @@ common apprpoach is to use something like
 to deprovision the failed node and replace it with a new one.
 
 However not all k8s clusters come with the Machine API configured, and adding it
-retrospecitvely is both complicated and not always possible and/or desirable.
+retrospectively is both complicated and not always possible and/or desirable.
 
-Additionally, physical machines can't pop into existance via an API call and
+Additionally, physical machines can't pop into existence via an API call and
 take much longer to provision.
 
 It is therefore clear that there is no one-size-fits-all solution for
@@ -52,8 +52,8 @@ single cluster, without creating conflicts.
 ## Implementations
 
 Implementations conforming to the ExternalRemediation API include:
-* [poison-pill](/remediation/poison-pill/poison-pill/) - a mechanism designed for shared-nothing environments without programatic access to BMC-like hardware
+* [poison-pill](/remediation/poison-pill/poison-pill/) - a mechanism designed for shared-nothing environments without programmatic access to BMC-like hardware
 * [(wip) metal3](https://github.com/metal3-io/cluster-api-provider-metal3/pull/157) - a mechanism designed for bare metal clusters with a functioning Metal3 API
 * [machine](https://github.com/medik8s/machine-deletion-remediation) - a mechanism designed for any cluster with a functioning Machine API
-* [(planned) direct]() - a mechanism designed around an existing set of [upstream fencing agents](https://github.com/ClusterLabs/fence-agents) for environments with an traditional API end-point (eg. IPMI) for power cycling cluster nodes
-* (concept) meatware - a mechanmism that includes explicit approval by a human
+* [(planned) direct]() - a mechanism designed around an existing set of [upstream fencing agents](https://github.com/ClusterLabs/fence-agents) for environments with a traditional API end-point (eg. IPMI) for power cycling cluster nodes
+* (concept) meatware - a mechanism that includes explicit approval by a human

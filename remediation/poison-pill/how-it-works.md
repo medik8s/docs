@@ -9,7 +9,7 @@ nav_order: 1
 # How Poison Pill Works?
 
 Poison Pill is a consumer of the external remediation API. It was tested with Node Healthcheck Operator (NHC) which creates a PoisonPillRemediation CR once a node turns unhealthy.
-Poison Pill reboots unheatlhy nodes, and the other healthy nodes are cordoning it, and letting the cluster know it can reschedule the workload elsewhere.
+Poison Pill reboots unhealthy nodes, and the other healthy nodes are cordoning it, and letting the cluster know it can reschedule the workload elsewhere.
 There are four main cases:
 
 ## A Node with API-Server Access
@@ -33,6 +33,6 @@ The healthy nodes will assume the unhealthy node has been rebooted after some sa
 
 ## An API-server failure
 If there's an api-server failure, which means that all nodes can't access the api-server, we don't want to reboot.
-It would create an uncessary reboot storm in the cluster.
+It would create an unnecessary reboot storm in the cluster.
 
 ![poison-pill-api-server-failure.png](../../images/poison-pill-api-server-failure.png)

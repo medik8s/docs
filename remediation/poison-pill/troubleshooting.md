@@ -18,7 +18,7 @@ The operator pod is responsible for syncing and creating the daemonset whenever 
 ## Operator is installed but I don't see the daemonset
 Please check the logs of the operator
 
-## An unheatlhy node was not remediated
+## An unhealthy node was not remediated
 First, you should check if PoisonPillRemediation (PPR) CR was created, this can be checked using `kubectl get ppr -A`.
 If there wasn't PPR CR when the node turned unhealthy, you should probably check the logs of the health detection system (e.g. NHC) to understand why it wasn't created.
 

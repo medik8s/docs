@@ -38,7 +38,7 @@ No. medik8s operators can work on any platform, unless specified otherwise by a 
 
 No.  The Node Healthcheck configuration includes a node selector, so you can
 treat the control plane differently to workers, and have pools of workers with
-different conditions and threasholds to provide a variety of SLAs.
+different conditions and thresholds to provide a variety of SLAs.
 
 ## Can I create my own definition of what counts as a healthy node?
 
@@ -47,7 +47,7 @@ are a set of basic conditions built into Kubernetes, but additional conditions
 can be defined and then referenced by Node Healthcheck.  Node Problem Detector
 is a common tool for creating and updating NodeConditions based on log scraping.
 
-## Can I create my mechansim for recovering a node?
+## Can I create my mechanism for recovering a node?
 
 Yes.  Node Healthcheck uses the sig-cluster's [External Remediation API](https://github.com/kubernetes-sigs/cluster-api/blob/master/docs/proposals/20191030-machine-health-checking.md#external-remediation)
 to uniquely associate a node failure with a specific recovery mechanism of 
@@ -84,7 +84,7 @@ Controller](https://github.com/medik8s/node-healthcheck-operator) also shares
 much of the same code.
 
 The primary difference between the two implementations is putting Nodes at the
-center of failure detection to avoid a dependancy on `Machine` objects, which
+center of failure detection to avoid a dependency on `Machine` objects, which
 are not common to all kubernetes installations.
 
 ## What is the Relationships to External Remediation API?
@@ -114,7 +114,7 @@ for consideration as a general purpose mechanism for detecting node failures and
 recovering compute power and affected workloads.
 
 In 2019, we improved support for bare metal by shipping an
-annotation based mechansim for rebooting nodes instead of going through a time
+annotation based mechanism for rebooting nodes instead of going through a time
 expensive reprovisioning cycle.
 
 In 2020, we worked with Ericsson to design an official API for using alternative
