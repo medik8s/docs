@@ -38,7 +38,7 @@ will be created.
 
 Regular volumes attached to pod are ephemeral and don't contain persisted data.
 They are mostly used to mount secretes, config maps, share unix sockets between
-components and maybe temporaty storage of data. Recovering them is not concidered
+components and maybe temporary storage of data. Recovering them is not considered
 an issue.
 Persistent volumes however are the main concern of workload that is lost.
 For persistent volumes from a CSI driver, the spec defines that a deletion pod
@@ -47,7 +47,7 @@ the volume from the underlying storage system - a unique operation per driver pr
 After a successful unpublishing the pod and the volume can start again, on a different
 node.
 
-## Virutualized worker note
+## Virtualized worker note
 Nodes which are VMs should be configured with a watchdog device ([see libvirt's watchdog support][3])
 In case it's not configured then poison-pill fallbacks to rebooting the machine
 using 'systemctl reboot'. The benefits of a virtualized watchdog is that its running
