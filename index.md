@@ -13,8 +13,8 @@ Medik8s is a project consists of several kubernetes operators that provide autom
 {: .fs-6 .fw-300 }
 
 
-[Get started now](/GettingStarted){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Demo](https://www.youtube.com/watch?v=8pSXAsioK8s){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Get Started Now](/GettingStarted){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Watch a Demo](https://www.youtube.com/watch?v=8pSXAsioK8s){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 Hardware is imperfect, and software contains bugs. When node level failures such
 as kernel hangs or dead NICs occur, the work required from the cluster does not
