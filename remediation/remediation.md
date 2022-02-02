@@ -34,7 +34,7 @@ Only after this is achieved do we become concerned with restoring cluster
 capacity.
 
 In cloud environments, where replacing a whole machine takes seconds, the most
-common apprpoach is to use something like 
+common approach is to use something like 
 [Machine API](https://github.com/kubernetes-sigs/cluster-api/blob/HEAD/docs/proposals/20181121-machine-api.md) 
 to deprovision the failed node and replace it with a new one.
 
