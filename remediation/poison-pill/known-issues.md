@@ -16,3 +16,4 @@ Poison Pill has several known issues:
 6. IPv6 is not supported
 7. Clusters with OVN network plugin are not supported due to [Bug 1973286](https://bugzilla.redhat.com/show_bug.cgi?id=1973286)
 8. At least two workers are required to get node fencing
+9. At release 0.3 channel name was changed from "**alpha**" to "**stable**". This means that when releases prior to 0.3 are upgraded, the channel name needs to be changed manually 
