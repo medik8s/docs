@@ -17,3 +17,9 @@ docker run --rm \
 ```
 
 and open `http://127.0.0.1:4000/` in your browser.
+
+### Troubleshooting
+- make sure command is executed in `docs` folder.
+- make sure `_site` dir exists.
+  - if it doesn't in order to create it run: `mkdir _site && chmod -R 777 _site`
+  
