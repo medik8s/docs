@@ -120,7 +120,7 @@ expensive reprovisioning cycle.
 In 2020, we worked with Ericsson to design an official API for using alternative
 mechanisms to recover bad nodes.  Since then Ericsson has prototyped a
 [metal3](http://metal3.io/) based implementation, and we have implemented
-[Poison Pill](/PoisonPill) for shared-nothing environments.
+[Self Node Remediation](https://github.com/medik8s/self-node-remediation) for shared-nothing environments.
 
 In 2021, we created medik8s to make general purpose HA available
 to all kubernetes clusters, not just ones backed by an infrastructure API.
@@ -128,6 +128,6 @@ to all kubernetes clusters, not just ones backed by an infrastructure API.
 ### Current Status
 
 Additional remediation mechanisms are still a work in progress, however the
-combination of Node Healthcheck and Poison Pill is currently being validated
+combination of Node Healthcheck and Self Node Remediation is currently being validated
 for production deployments and is expected to be live in a large cluster at a
 Fortune ranked customer by the end of the year.

@@ -1,4 +1,4 @@
-title Poison Pill - Unhealthy Node with API-Server Access
+title SNR - Unhealthy Node with API-Server Access
 
 
 participant Node A

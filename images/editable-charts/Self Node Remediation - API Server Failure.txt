@@ -1,4 +1,4 @@
-title Poison Pill - API Server Failure
+title Self Node Remediation - API Server Failure
 
 participant Node A
 
