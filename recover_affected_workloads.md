@@ -25,7 +25,7 @@ control plane needs to know that the running node is gone and the only way to ac
 that is by deleting the node object, which will trigger [scheduling the pods for
 deletion][2]
 
-The job of [poison-pill]() is to reboot a failing host, delete its node object,
+The job of [self-node-remediation](/remediation/self-node-remediation/self-node-remediation/) is to reboot a failing host, delete its node object,
 ,and recreate it to restore the node to a working state.
 
 # Pod recovery flow
@@ -49,7 +49,7 @@ node.
 
 ## Virtualized worker note
 Nodes which are VMs should be configured with a watchdog device ([see libvirt's watchdog support][3])
-In case it's not configured then poison-pill fallbacks to rebooting the machine
+In case it's not configured then self-node-remediation fallbacks to rebooting the machine
 using 'systemctl reboot'. The benefits of a virtualized watchdog is that its running
 on the hypervisor and is not vulnerable to resource starvation problem in the VM level
 resulting a quicker reboot action.
