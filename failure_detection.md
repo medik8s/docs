@@ -43,4 +43,4 @@ or total number of nodes that can be considered candidates for concurrent
 remediation.
 
 ## Background
-See the [FAQ](/faq)
+See the [FAQ](/faq).
