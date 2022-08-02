@@ -1,4 +1,4 @@
-title Poison Pill - Isolated Node
+title Self Node Remediation - Isolated Node
 
 participant Node A
 
