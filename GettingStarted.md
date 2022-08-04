@@ -22,6 +22,6 @@ After few minutes, self-node-remediation will be automatically installed.
 Node Healthcheck Operator includes a dependency on [Self Node Remediation](/remediation/self-node-remediation/self-node-remediation/) with opinionated defaults to be able to function right after installation.
 You may want to tweak the configuration of both, or install one of the [alternatives to Self Node Remediation](/remediation/remediation/#implementations) in order to match your cluster needs.
 
-To tweak NHC configuration see [NHC's README](https://github.com/medik8s/node-healthcheck-operator/blob/master/docs/README.md)
+To tweak NHC configuration see [NHC's README](https://github.com/medik8s/node-healthcheck-operator/blob/master/docs/README.md).
 
-To change the default Self Node Remediation configuration, see [Self Node Remediation Configuration](/remediation/self-node-remediation/configuration) page
+To change the default Self Node Remediation configuration, see [Self Node Remediation Configuration](/remediation/self-node-remediation/configuration) page.

@@ -14,9 +14,9 @@ nav_order: 3
 {:toc}
 
 A Node entering an unready state after 5 minutes is an obvious sign that a
-failure occurred, but depending on your physical environment, workloads, and
-tolerance for risk, there may be other criteria or thresholds that are
-appropriate.
+failure occurred. However there may be other criteria or thresholds that are
+ more appropriate based on your particular physical environment, workloads, 
+ and tolerance for risk.
 
 ## Node Healthcheck Controller
 
@@ -43,4 +43,4 @@ or total number of nodes that can be considered candidates for concurrent
 remediation.
 
 ## Background
-See the [FAQ](/faq)
+See the [FAQ](/faq).
