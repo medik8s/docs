@@ -22,6 +22,8 @@ failure occurred. However there may be other criteria or thresholds that are
 Generally Available
 {: .label .label-green }
 
+<img src="../images/operator-icon/nhc_blue.png" alt="nhc-icon" width="200" style="margin-left:auto; margin-right:auto; display:block"/>
+
 The [Node Healthcheck Controller](https://github.com/medik8s/node-healthcheck-operator) checks each Node's set of [NodeConditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
 against the criteria and thresholds defined for it in [NodeHealthCheck](https://github.com/medik8s/node-healthcheck-operator#nodehealthcheck-custom-resource) CRs.
 If the Node is deemed to be in a failed state, and remediation is appropriate,
