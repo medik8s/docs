@@ -16,7 +16,7 @@ plane will start counting down. It will either be the kubelet process which does
 report status to the control plane [(see node_status_update_frequency)][1] or
 the containers themselves will fail/crash and be marked as `phase: failed`.
 Nodes status conditions, set by the node-controller in the control plane, will
-reflect now what's happening and for how long.
+reflect the current status and how long the node has been in that state.
 For example, in the case where the node fails to update its status to the
 masters the node condition will be set to `type:Ready status:Unknown`.
 

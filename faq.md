@@ -94,7 +94,7 @@ the bad node and replace it with a new one was the only necessary recovery
 mechanism.
 
 The medik8s team partnered with Ericsson to convince the sig-cluster community
-that other mechanisms were needed (particularly on bare metal) and together we
+that other mechanisms were needed (particularly on bare metal). Together we
 created the External Remediation API that is used by both the Machine and Node
 Healthcheck Controllers.
 
