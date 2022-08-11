@@ -6,12 +6,13 @@ nav_order: 6
 
 # Place Nodes in Maintenance Mode
 {: .no_toc }
-
 ## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
+
+<img src="../images/operator-icon/nmo_blue_icon.png" alt="nmo-icon" width="150" style="margin-left:auto; margin-right:auto; display:block"/>
 
 ## The Problem
 
