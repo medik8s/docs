@@ -49,7 +49,7 @@ is a common tool for creating and updating NodeConditions based on log scraping.
 
 ## Can I create my mechanism for recovering a node?
 
-Yes.  Node Healthcheck uses the sig-cluster's [External Remediation API](https://github.com/kubernetes-sigs/cluster-api/blob/master/docs/proposals/20191030-machine-health-checking.md#external-remediation)
+Yes.  Node Healthcheck uses the sig-cluster's [External Remediation API](https://github.com/kubernetes-sigs/cluster-api/blob/main/docs/proposals/20191030-machine-health-checking.md#external-remediation)
 to uniquely associate a node failure with a specific recovery mechanism of 
 your choosing. 
 
@@ -78,7 +78,7 @@ available, but also supports other mechanisms.
 
 Apart from the medik8s team being actively involved with the [Machine
 Healthcheck
-Controller](https://github.com/kubernetes-sigs/cluster-api/blob/master/controllers/machinehealthcheck_controller.go),
+Controller](https://github.com/kubernetes-sigs/cluster-api/blob/main/internal/controllers/machinehealthcheck/machinehealthcheck_controller.go),
 the [Node Healthcheck
 Controller](https://github.com/medik8s/node-healthcheck-operator) also shares
 much of the same code.
