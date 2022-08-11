@@ -34,6 +34,7 @@ kubernetes-based cluster to automate:
 * the [detection of failures](failure_detection),
 * putting [nodes into a safe state](/remediation/remediation),
 * allowing the scheduler to [recover affected workloads](recover_affected_workloads)
+* drain pods from a node, and [setting it into maintance mode](maintenance-node)
 * attempting to [restore cluster capacity]()
 
 ## Community
