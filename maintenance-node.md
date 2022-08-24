@@ -29,11 +29,6 @@ When the node is in maintanince mode, then it is cordoned - set as unschedulable
 When the node leaves maintenance mode, then it is uncordoned - set as schedulable.
 Detailed progress and node status details are provided during maintenance.
 
-Previously NMO was developed and bundled in KubeVirt project (or [OpenShift Virtualization](https://docs.openshift.com/container-platform/latest/virt/about-virt.html)).
-
-
 ## Usage
 The operator can be installed using [OperatorHub](https://operatorhub.io/operator/node-maintenance-operator) or [built and run from source](https://github.com/medik8s/node-maintenance-operator#build-and-run-the-operator).
 See [NMO's Readme](https://github.com/medik8s/node-maintenance-operator#setting-node-maintenance) for how to set/unset the node into maintenance mode, and also for better understanding the  [nm CR status](https://github.com/medik8s/node-maintenance-operator#nodemaintenance-status).
-
-In addition, OpenShift users can use NMO directly from the Red Hat catalog (please see Node Maintenance Operator documnetaion in [OpenShfit Container Platform (OCP)](https://docs.openshift.com/container-platform/latest/nodes/nodes/eco-node-maintenance-operator.html)).
