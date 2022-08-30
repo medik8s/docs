@@ -103,31 +103,3 @@ Healthcheck Controllers.
 The medik8s team is employed at Red Hat, where we leverage 20 years of personal
 experience creating HA architectures to create a kubernetes-native HA experience for
 workloads such as Stateful sets and RWO Volumes.
-
-## History
-
-In 2018, the team behind medik8s prototyped what would eventually ship as the
-Machine Healthcheck Controller for OpenShift 4.2.
-
-Soon after, Red Hat brought the Machine Healthcheck Controller to sig-cluster
-for consideration as a general purpose mechanism for detecting node failures and
-recovering compute power and affected workloads.
-
-In 2019, we improved support for bare metal by shipping an
-annotation based mechanism for rebooting nodes instead of going through a time
-expensive reprovisioning cycle.
-
-In 2020, we worked with Ericsson to design an official API for using alternative
-mechanisms to recover bad nodes.  Since then Ericsson has prototyped a
-[metal3](http://metal3.io/) based implementation, and we have implemented
-[Self Node Remediation](https://github.com/medik8s/self-node-remediation) for shared-nothing environments.
-
-In 2021, we created medik8s to make general purpose HA available
-to all kubernetes clusters, not just ones backed by an infrastructure API.
-
-### Current Status
-
-Additional remediation mechanisms are still a work in progress, however the
-combination of Node Healthcheck and Self Node Remediation is currently being validated
-for production deployments and is expected to be live in a large cluster at a
-Fortune ranked customer by the end of the year.
