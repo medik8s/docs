@@ -32,7 +32,7 @@ We plan to improve the exiting operators by adding Master (control plane) fencin
 Furthermore, we have few work in progress operators:
 
 - [Machine Deletion](/remediation/machine-deletion/machine-deletion) - Remediates nodes by deleting the associated OpenShift machine. Triggered by NHC.
-- [HA-SNO](https://github.com/medik8s/ha-sno) - High Availability Single Node Openshift.
+- [HA-SNO](https://github.com/medik8s/ha-sno) - High Availability based on two Single Node Openshift .
 
 ## History
 
