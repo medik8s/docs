@@ -14,8 +14,13 @@ nav_order: 6
 
 ## The Problem
 
-Nodes in a Kubernetes cluster (especially bare metal nodes) face many problems, and they can fail due to a kernel error or a NIC card hardware failure.
-The workloads on the failed node need to be restarted on another node in the cluster while the problem node is repaired or replaced.
+Kubernetes admins face situations where they might do something harmful to the cluster 
+(e.g., replacing a drive, RAM, or a NIC), thus prior to that they should place the cluster nodes into maintenance mode.
+When a node is enetering the maintenance mode, then it's workloads are migrated to another (available) node.
+In addition, an admin can already use `kubectl drain/cordon` [since Kubernetes v1.5](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/) 
+to perform this kind of operation.
+But because it could be a long running process that is sensitive to network loss, between admin and cluster nodes,
+thus there is a need for an automatic way which is also independent.
 
 ## The Solution
 [Node Maintenance Operator (NMO)](https://github.com/medik8s/node-maintenance-operator) is an open source Kubernetes operator which keeps nodes cordoned and drained while a matching NodeMaintenance (nm) custom resource (CR) exists.
