@@ -37,5 +37,5 @@ When the node leaves maintenance mode, then it is uncordoned - set as schedulabl
 Detailed progress and node status details are provided during maintenance.
 
 ## Usage
-The operator can be installed from [OperatorHub](https://operatorhub.io) or [built and run from source](https://github.com/medik8s/node-maintenance-operator#build-and-run-the-operator).
+The operator can be installed from [OperatorHub](https://operatorhub.io/operator/node-maintenance-operator) or [built and run from source](https://github.com/medik8s/node-maintenance-operator#build-and-run-the-operator).
 See [NMO's Readme](https://github.com/medik8s/node-maintenance-operator#setting-node-maintenance) for how to set/unset the node into maintenance mode, and also for better understanding of the [nm CR status](https://github.com/medik8s/node-maintenance-operator#nodemaintenance-status).
