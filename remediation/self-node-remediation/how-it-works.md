@@ -41,7 +41,7 @@ It would create an unnecessary reboot storm in the cluster.
 Control plane fencing can be divided into two primary scenarios.
 
 ### API Server Connectivity
-In this scenario, the control plane node to be remediated is not isolated. It can be directly connected to the API Server, or it can be indirectly connected to the API Server through worker nodes or control-plane nodes, that are directly connected to the API Server.
+In this scenario, the control plane node to be remediated is not isolated. It can be connected to the API Server directly or indirectly through workers or control-plane nodes that are connected to the API Server.
 When there is API Server Connectivity, the control plane node is remediated only if the Node Health Check Operator has created a SelfNodeRemediation custom resource (CR) for the node.
 
 ### No API Server Connectivity
