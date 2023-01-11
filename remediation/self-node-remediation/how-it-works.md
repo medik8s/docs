@@ -47,15 +47,18 @@ When there is API Server Connectivity, the control plane node is remediated only
 ### No API Server Connectivity
 In this scenario, the control plane node to be remediated is isolated from the API Server. The node cannot connect directly or indirectly to the API Server.
 When there is no API Server Connectivity, the control plane node will be remediated as outlined with these steps:
-Check the status of the control plane node with the majority of the peer worker nodes. If the majority of the peer worker nodes cannot be reached, the node will be analyzed further.
-Self-diagnose the status of the control plane node
-If self diagnostics passed, no action will be taken.
-If self diagnostics failed, the node will be fenced and remediated.
+- Check the status of the control plane node with the majority of the peer worker nodes. 
+- If the majority of the peer worker nodes can't be reached 
+  - Self-diagnose the status of the control plane node
+    - If self diagnostics passed no action will be taken.
+    - Else the node will be fenced and remediated.
+- Else: check the connectivity of the control plane node with other control plane nodes. 
+  - If the node can communicate with any other control plane peer, no action will be taken. 
+  - Else the node will be fenced and remediated.
+
 #### The self diagnostics currently supported are: 
 - checking the kubelet service status
 - checking endpoint availability using opt in configuration.
-
-If the node did not manage to communicate to most of its worker peers, check the connectivity of the control plane node with other control plane nodes. If the node can communicate with any other control plane peer, no action will be taken. Otherwise, the node will be fenced and remediated.
 
 ![control-plane-without-api-server-access.png](../../images/control-plane-without-api-server-access.png)
 
