@@ -36,3 +36,27 @@ If there's an api-server failure, which means that all nodes can't access the ap
 It would create an unnecessary reboot storm in the cluster.
 
 ![self-node-remediation-api-server-failure.png](../../images/self-node-remediation-api-server-failure.png)
+
+## Control plane fencing
+Control plane fencing can be divided into two primary scenarios.
+
+### API Server Connectivity
+In this scenario, the control plane node to be remediated is not isolated. It can be directly connected to the API Server, or it can be indirectly connected to the API Server through worker nodes or control-plane nodes, that are directly connected to the API Server.
+When there is API Server Connectivity, the control plane node is remediated only if the Node Health Check Operator has created a SelfNodeRemediation custom resource (CR) for the node.
+
+### No API Server Connectivity
+In this scenario, the control plane node to be remediated is isolated from the API Server. The node cannot connect directly or indirectly to the API Server.
+When there is no API Server Connectivity, the control plane node will be remediated as outlined with these steps:
+Check the status of the control plane node with the majority of the peer worker nodes. If the majority of the peer worker nodes cannot be reached, the node will be analyzed further.
+Self-diagnose the status of the control plane node
+If self diagnostics passed, no action will be taken.
+If self diagnostics failed, the node will be fenced and remediated.
+#### The self diagnostics currently supported are: 
+- checking the kubelet service status
+- checking endpoint availability using opt in configuration.
+
+If the node did not manage to communicate to most of its worker peers, check the connectivity of the control plane node with other control plane nodes. If the node can communicate with any other control plane peer, no action will be taken. Otherwise, the node will be fenced and remediated.
+
+![control-plane-without-api-server-access.png](../../images/control-plane-without-api-server-access.png)
+
+![control-plane-without-api-server-access 2.png](../../images/control-plane-without-api-server-access 2.png)

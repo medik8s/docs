@@ -1,0 +1,41 @@
+title Control Plane Fencing - API Server Failure (Without access to most workers peers)
+
+participant "Control Plane \nNode A" as Node A
+
+participant API server
+
+participant "Control Plane \nNode B" as Node B
+
+participant "Control Plane \nNode C" as Node F
+
+participant "Worker Node \nNode A" as Node C
+
+participant "Worker Node \nNode B" as Node D
+
+participant "Worker Node \nNode C" as Node E
+
+Node A->API server: am I healthy?
+API server-->Node A: No Response
+
+
+note over Node A: **Check with \nworker peers
+Node A->Node C:am I healthy?
+Node C->API server:Is Node A healthy?
+API server-->Node C:No Response
+Node C->Node A: Couldn't Contact API Server
+
+Node A->Node D:am I healthy?
+Node D-->Node A: No Response
+
+Node A->Node E:am I healthy?
+Node E-->Node A: No Response
+
+note over Node A: **Check with \ncontrol plane \npeers
+Node A->Node B:am I healthy?
+Node B-->Node A: No Response
+
+Node A->Node F:am I healthy?
+Node F-->Node A: No Response
+
+note over Node A:was unable to \ncontact most worker nodes \nand any control-plane peer
+note over Node A: remediate
