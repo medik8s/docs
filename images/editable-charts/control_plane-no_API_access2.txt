@@ -25,17 +25,17 @@ API server-->Node C:No Response
 Node C->Node A: Couldn't Contact API Server
 
 Node A->Node D:am I healthy?
-Node D-->Node A: No Response
+Node D--#red>Node A: No Response
 
 Node A->Node E:am I healthy?
-Node E-->Node A: No Response
+Node E--#red>Node A: No Response
 
 note over Node A: **Check with \ncontrol plane \npeers
 Node A->Node B:am I healthy?
 Node B-->Node A: No Response
 
 Node A->Node F:am I healthy?
-Node F-->Node A: No Response
+Node F--#red>Node A: No Response
 
 note over Node A:was unable to \ncontact most worker nodes \nand any control-plane peer
 note over Node A: remediate

@@ -30,7 +30,7 @@ API server-->Node D:No Response
 Node D->Node A: Couldn't Contact API Server
 
 Node A->Node E:am I healthy?
-Node E-->Node A: No Response
+Node E--#red>Node A: No Response
 
 note over Node A: **Self diagnose start
 Node A->Node A:is kubelet \nrunning ?
