@@ -62,4 +62,4 @@ When there is no API Server Connectivity, the control plane node will be remedia
 
 ![control-plane-without-api-server-access.png](../../images/control-plane-without-api-server-access.png)
 
-![control-plane-without-api-server-access 2.png](../../images/control-plane-without-api-server-access 2.png)
+![control-plane-without-api-server-access2.png](../../images/control-plane-without-api-server-access2.png)
