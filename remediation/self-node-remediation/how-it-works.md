@@ -38,7 +38,7 @@ It would create an unnecessary reboot storm in the cluster.
 ![self-node-remediation-api-server-failure.png](../../images/self-node-remediation-api-server-failure.png)
 
 ## Control plane fencing
-Control plane fencing can be divided into two primary scenarios.
+Control plane fencing can be divided into two primary scenarios: when there is an API server connectivity, and when there is no such connectivity.
 
 ### API Server Connectivity
 In this scenario, the control plane node to be remediated is not isolated. It can be connected to the API Server directly or indirectly through workers or control-plane nodes that are connected to the API Server.
