@@ -30,7 +30,7 @@ In addition, check the logs of the self node remediation agents. You should chec
 This is a known issue, and you should manually delete the self node remediation config CR to get it deleted.
 
 ## How do I get community support?
-Feel free to reach out in our [medik8s google group](https://groups.google.com/g/medik8s)
+Feel free to reach out in our [Medik8s google group](https://groups.google.com/g/medik8s)
 
 
 

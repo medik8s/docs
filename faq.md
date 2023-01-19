@@ -17,22 +17,22 @@ nav_order: 9
 
 Medik8s is intended to be a playful misspelling of the English word "medicates" and is pronouced the same way.
 
-## Does medik8s require OpenShift?
+## Does Medik8s require OpenShift?
 
 No.  Medik8s can run on any kubernetes cluster.
 
-## Does medik8s require Machine API?
+## Does Medik8s require Machine API?
 
 No.  Medik8s puts Nodes at the center of failure detection and recovery and can
 run on any kubernetes cluster.
 
-## Does medik8s require special hardware?
+## Does Medik8s require special hardware?
 
 No.  While Medik8s can take advantage of hardware watchdogs and/or BMCs, it also
 has options for shared-nothing recovery.
 
-## Does medik8s work on bare metal only?
-No. medik8s operators can work on any platform, unless specified otherwise by a specific remediator.
+## Does Medik8s work on bare metal only?
+No. Medik8s operators can work on any platform, unless specified otherwise by a specific remediator.
 
 ## Do all nodes need to be treated the same?
 
@@ -56,11 +56,11 @@ your choosing.
 ## How can I get involved?
 
 Reach out to the [google group](https://groups.google.com/g/medik8s) or submit 
-a PR to one of the [medki8s projects](https://github.com/medik8s/).
+a PR to one of the [Medik8s projects](https://github.com/medik8s/).
 
 ## What is the relationships to sig-cluster?
 
-The medik8s team has worked with the [sig-cluster
+The Medik8s team has worked with the [sig-cluster
 community](https://github.com/kubernetes/community/tree/master/sig-cluster-lifecycle)
 for many years.  While we have many things in common, they are naturally
 focussed on furthering the Machine/Cluster APIs.  Basing our solution on those
@@ -76,7 +76,7 @@ available, but also supports other mechanisms.
 
 ## What is the connection to Machine Healthcheck Controller?
 
-Apart from the medik8s team being actively involved with the [Machine
+Apart from the Medik8s team being actively involved with the [Machine
 Healthcheck
 Controller](https://github.com/kubernetes-sigs/cluster-api/blob/main/internal/controllers/machinehealthcheck/machinehealthcheck_controller.go),
 the [Node Healthcheck
@@ -93,13 +93,13 @@ The original MHC implementation assumed that using the Machine API to destroy
 the bad node and replace it with a new one was the only necessary recovery
 mechanism.
 
-The medik8s team partnered with Ericsson to convince the sig-cluster community
+The Medik8s team partnered with Ericsson to convince the sig-cluster community
 that other mechanisms were needed (particularly on bare metal). Together we
 created the External Remediation API that is used by both the Machine and Node
 Healthcheck Controllers.
 
 ## Is a company behind this?
 
-The medik8s team is employed at Red Hat, where we leverage 20 years of personal
+The Medik8s team is employed at Red Hat, where we leverage 20 years of personal
 experience creating HA architectures to create a kubernetes-native HA experience for
 workloads such as Stateful sets and RWO Volumes.
