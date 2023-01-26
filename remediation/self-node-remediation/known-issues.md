@@ -14,4 +14,5 @@ Self Node Remediation has several known issues:
 4. Upon installing self node remediation operator, it might take up to 2 minutes before the daemonset is deployed
 5. IPv6 is not supported
 6. At least two workers are required to get node fencing
-7. At release 0.3 channel name was changed from "**alpha**" to "**stable**". This means that when releases prior to 0.3 are upgraded, the channel name needs to be changed manually 
+7. At release 0.3 channel name was changed from "**alpha**" to "**stable**". This means that when releases prior to 0.3 are upgraded, the channel name needs to be changed manually
+8. Prior to installing SNR on a Kubernetes 1.25+ cluster, a user must manually set a privileged PSA label (i.e. pod-security.kubernetes.io/enforce: privileged) on SNR's namespace. It gives SNR's agents permissions to reboot the node (in case it needs to be remediated).
