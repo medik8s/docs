@@ -3,7 +3,7 @@ layout: default
 title: Known Issues
 parent: Machine Deletion
 grand_parent: Remediation
-nav_order: 1
+nav_order: 3
 ---
 
 # Known Issues
