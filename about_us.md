@@ -22,7 +22,7 @@ We, Medik8s team, are four Red Hatters with a strong passion to High Availabitli
 
 We develop Kubernetes Open Source Operators using [Operator Lifecycle Manager (OLM)](https://olm.operatorframework.io/) that provide maintenance support, automatic node remediation and high availability for singleton workloads:
 
-- [Node Healthcheck Operator (NHC)](failure_detection) - Detecting Node Failures, triggering remediation, which is performed by other operators like Self Node Remediation or MachineDeletion.
+- [Node Healthcheck Operator (NHC)](failure_detection) - Detecting Node Failures, triggering remediation, which is performed by other operators like Self Node Remediation or Machine Deletion Remediation.
 - [Self Node Remediation (SNR)](/remediation/self-node-remediation/self-node-remediation) - Remediates nodes by rebooting, without needing a management interface like e.g. IPMI, or a node / machine provisioning API. Works standalone, and / or with NHC.
 - [Node Maintenance Operator (NMO)](maintenance-node) - Declarative node cordoning and draining prior to harmful decisions.
 
@@ -31,7 +31,7 @@ We develop Kubernetes Open Source Operators using [Operator Lifecycle Manager (O
 We plan to improve the exiting operators by adding Master (control plane) fencing capabilites to SNR and NHC, which currently **only** work for worker nodes.
 Furthermore, we have few work in progress operators:
 
-- [Machine Deletion](/remediation/machine-deletion/machine-deletion) - Remediates nodes by deleting the associated OpenShift machine. Triggered by NHC.
+- [Machine Deletion Remediation](/remediation/machine-deletion/machine-deletion-remediation) - Remediates nodes by deleting the associated OpenShift machine. Triggered by NHC.
 - [HA-SNO](https://github.com/medik8s/ha-sno) - High Availability based on two Single Node Openshift .
 
 ## History
