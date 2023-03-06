@@ -16,7 +16,7 @@ nav_order: 10
 
 ## Who are we?
 
-We, Medik8s team, are four Red Hatters with a strong passion to High Availabitlity (HA) solutions in the Kubernetes world.
+We are small team of Red Hatters with a strong passion to High Availability (HA) solutions in the Kubernetes world.
 
 ## What we do?
 
@@ -28,11 +28,10 @@ We develop Kubernetes Open Source Operators using [Operator Lifecycle Manager (O
 
 ## What we plan to do?
 
-We plan to improve the exiting operators by adding Master (control plane) fencing capabilites to SNR and NHC, which currently **only** work for worker nodes.
-Furthermore, we have few work in progress operators:
+We have few work in progress operators:
 
 - [Machine Deletion Remediation](/remediation/machine-deletion/machine-deletion-remediation) - Remediates nodes by deleting the associated OpenShift machine. Triggered by NHC.
-- [HA-SNO](https://github.com/medik8s/ha-sno) - High Availability based on two Single Node Openshift .
+- [HA-SNO](https://github.com/medik8s/ha-sno) - High Availability based on two Single Node OpenShift.
 
 ## History
 
@@ -54,15 +53,15 @@ mechanisms to recover bad nodes.  Since then Ericsson has prototyped a
 
 In 2021, we created Medik8s to make general purpose HA available
 to all kubernetes clusters, not just ones backed by an infrastructure API.
-Afterwards, we have implelmented [Node Healthcheck Operator](https://github.com/medik8s/node-healthcheck-operator) 
-which detects the node's health and deploy with PP to remidate the node.
+Afterwards, we have implemented [Node Healthcheck Operator](https://github.com/medik8s/node-healthcheck-operator) 
+which detects the node's health and deploy with PP to remediate the node.
 
 In 2022, we have moved Node Maintenance Operator from [KubeVirt project](https://github.com/kubevirt/node-maintenance-operator) 
 to [Medik8s project](https://github.com/medik8s/node-maintenance-operator) 
-which is a decalrative way for node cordonning and drainning.
+which is a declarative way for node cordoning and draining.
 Moreover, we have renamed [Poison Pill](https://github.com/medik8s/poison-pill) project to 
 [Self Node Remediation](https://github.com/medik8s/self-node-remediation) project.
 
 ## Community
-Join [our google group](https://groups.google.com/g/medik8s) to get more info, participate in dicussions and get notified
+Join [our google group](https://groups.google.com/g/medik8s) to get more info, participate in discussions and get notified
 for new releases

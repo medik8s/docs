@@ -37,7 +37,7 @@ kubernetes-based cluster to automate:
 * attempting to [restore cluster capacity]()
 
 ## Community
-Join [our google group](https://groups.google.com/g/medik8s) to get more info, participate in dicussions and get notified
+Join [our google group](https://groups.google.com/g/medik8s) to get more info, participate in discussions and get notified
 for new releases
 
 <script type="text/javascript">

@@ -16,7 +16,7 @@ nav_order: 6
 
 Kubernetes admins face situations where they might do something harmful to the cluster 
 (e.g., replacing a drive, RAM, or a NIC), thus prior to that they should place the cluster nodes into maintenance mode.
-When a node is enetering the maintenance mode, then it's workloads are migrated to another (available) node.
+When a node is entering the maintenance mode, then it's workloads are migrated to another (available) node.
 In addition, an admin can already use `kubectl drain/cordon` [since Kubernetes v1.5](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/) 
 to perform this kind of operation.
 But because it could be a long running process that is sensitive to network loss, between admin and cluster nodes,

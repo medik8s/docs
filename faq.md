@@ -56,7 +56,7 @@ your choosing.
 ## How can I get involved?
 
 Reach out to the [google group](https://groups.google.com/g/medik8s) or submit 
-a PR to one of the [medki8s projects](https://github.com/medik8s/).
+a PR to one of the [Medik8s projects](https://github.com/medik8s/).
 
 ## What is the relationships to sig-cluster?
 
