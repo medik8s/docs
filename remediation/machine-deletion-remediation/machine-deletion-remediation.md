@@ -7,7 +7,7 @@ parent: Remediation
 ---
 
 # Machine-API Driven Remediation
-Generally Available
+Tech Preview
 {: .label .label-green }
 
 
