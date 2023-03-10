@@ -6,7 +6,7 @@ has_children: true
 parent: Remediation
 ---
 
-# Machine-API Driven Remediation
+# Machine remediation via Machine-Deletion-Remediation
 Tech Preview
 {: .label .label-yellow }
 
