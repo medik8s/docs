@@ -11,7 +11,7 @@ work-in-progress
 {: .label }
 
 [metal3](http://metal3.io/) is a CNCF project that provides a bare metal hosts provisioning, which integrates with the Machine API.
-Unlike cloud providers, reprpovisioning a bare metal host could be a long operation, during which the stateful applications are down.
+Unlike cloud providers, reprovisioning a bare metal host could be a long operation, during which the stateful applications are down.
 To recover workloads quickly, the Metal3 power based remediator will fence the node by shutting it off, deleting the node object, and power the host back on.
 
 ## Metal Power based remediators vs Self Node Remediation

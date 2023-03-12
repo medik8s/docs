@@ -17,7 +17,7 @@ nav_order: 3
 
 ## How Self Node Remediation Reboots a Node?
 We encourage users to utilize a watchdog device, which will be able to reboot the node even in the case of resource starvation or bugs that may exist.
-In nodes without a hardware wathcdog device, softdog is preferred.
+In nodes without a hardware watchdog device, softdog is preferred.
 In the absence of a valid watchdog device, self node remediation will use forced software reboot.
 
 ## Why does Self Node Remediation contact other nodes?
@@ -45,7 +45,7 @@ Self Node Remediation has 3 CRDs:
 * SelfNodeRemediationTemplate - automatically created by the operator and should be referenced in the MHC/NHC CR. This is currently empty but we might be used to pass some remediation configuration.
 
 ## Does Self Node Remediation work on its own as a standalone operator?
-Self Node Remediation is a remediation/fencing system. It doesn’t provide any health detection system.
+Self Node Remediation is a remediation/fencing system. It doesn't provide any health detection system.
 Self node remediation is a consumer of the external remediation API, and responds to health issues reported by that API.
 Note that in the case of a node that can’t contact any of the nodes, the self node remediation will trigger remediation without relying on any health detection system.
 

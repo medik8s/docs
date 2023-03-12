@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How It Works
-parent: Machine Deletion
+parent: Machine Deletion Remediation
 grand_parent: Remediation
 nav_order: 1
 ---

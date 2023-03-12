@@ -15,7 +15,7 @@ There are four main cases:
 ## A Node with API-Server Access
 When a node has api-server access it can easily detect if NHC declared it as healthy or not:
 
-![self-node-remediation-node-with-api-server-acess](../../images/self-node-remediation-with-api-server-access.png)
+![self-node-remediation-node-with-api-server-access](../../images/self-node-remediation-with-api-server-access.png)
 
 ## A Node without API-Server Access
 When a node loses api-server access it can't check if it's healthy or not (i.e. to check if SelfNodeRemediation CR exists for it).
