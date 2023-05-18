@@ -42,7 +42,12 @@ The unhealthy life-cycle flow can be described as follows:
 Self Node Remediation has 3 CRDs:
 * SelfNodeRemediationConfig - automatically created by the operator. Contains configuration for the self node remediation daemonset, and can be modified by the user.
 * SelfNodeRemediation - the health detection system (e.g. MHC/NHC) should create instance of this CR to signal that a node/machine is unhealthy.
-* SelfNodeRemediationTemplate - automatically created by the operator and should be referenced in the MHC/NHC CR. This is currently empty but we might be used to pass some remediation configuration.
+* SelfNodeRemediationTemplate - automatically created by the operator and should be referenced in the MHC/NHC CR. This CRD defines the remediation strategy for the nodes. The following remediation strategies are available:
+  * ResourceDeletion (default):
+    This remediation strategy removes the pods and associated volume attachments on the node rather than the node object. This strategy helps to recover workloads faster. ResourceDeletion is the default remediation strategy.
+  * OutOfServiceTaint:
+    This remediation strategy will add the out-of-service taint which is a new well-known taint "node.kubernetes.io/out-of-service" that enables automatic deletion of pv-attached pods on failed nodes, "OutOfServiceTaint" is only supported on clusters with k8s version 1.26+ or OCP/OKD version 4.13+.
+
 
 ## Does Self Node Remediation work on its own as a standalone operator?
 Self Node Remediation is a remediation/fencing system. It doesn't provide any health detection system.

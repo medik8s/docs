@@ -18,7 +18,7 @@ Node B->API server: Mark node A as unschedulable
 Node A->API server:am I healthy?
 API server->Node A: No
 note over Node A: reboot
-Node B->API server: delete Node A
+Node B->API server: delete Node's A workload
 note over API server:rescheduling node A's workloads
-Node B->API server: restore node A
+Node A->API server: node A is restored
 note over API server: schedule pods on worker A
