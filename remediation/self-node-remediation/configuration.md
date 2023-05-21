@@ -16,7 +16,7 @@ Currently there are two configuration fields:
 3. isSoftwareRebootEnabled: true - Specify if you want to enable software reboot of the unhealthy nodes. By default, the value of isSoftwareRebootEnabled is set to true. To disable the software reboot, set the parameter value to false.
 4. apiServerTimeout: 15s - Specify the timeout duration to check connectivity with each API server. When this duration elapses, the Operator starts remediation. The timeout duration must be greater than or equal to 10 milliseconds.
 5. apiCheckInterval: 5s - Specify the frequency to check connectivity with each API server. The timeout duration must be greater than or equal to 1 second.
-6. maxApiErrorThreshold: 3 - Specify a threshold value. After reaching this threshold, the node starts contacting its peers. The threshold value must be greater than or equal to 1 second.
+6. maxApiErrorThreshold: 3 - Specify a threshold value. When reaching this threshold, the node starts contacting its peers. The threshold value must be greater than or equal to 1 second.
 7. peerApiServerTimeout: 5s - Specify the duration of the timeout for the peer to connect the API server. The timeout duration must be greater than or equal to 10 milliseconds.
 8. peerDialTimeout: 5s - Specify the duration of the timeout for establishing connection with the peer. The timeout duration must be greater than or equal to 10 milliseconds.
 9. peerRequestTimeout: 5s - Specify the duration of the timeout to get a response from the peer. The timeout duration must be greater than or equal to 10 milliseconds.
