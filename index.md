@@ -46,3 +46,67 @@ function openRemediationMenu(){
  }
 document.body.addEventListener("load", openRemediationMenu(), false);
 </script>
+
+<style>
+  /* Common styles for logos */
+  .logo-link {
+    display: block;
+    text-align: center;
+  }
+
+  /* Style for the section title */
+  .section-title {
+    text-align: center;
+    margin-top: 120px; /* Increased space above the title */
+    margin-bottom: 60px; /* Increased space below the title */
+  }
+
+  /* Style for the container of logo pairs */
+  .logos-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow logos to wrap to the next line */
+    margin-bottom: 30px; /* Reduced space between blocks of logos */
+  }
+
+  .logos-container .logo-link {
+    margin: 0; /* Reset margin to zero */
+    flex: 1 1 auto; /* Distribute logos with equal space */
+    max-width: calc(50% - 5px); /* Maximum width of each logo container with reduced gap */
+  }
+
+  /* Center-align the last single logo */
+  .center-logo:last-child {
+    justify-content: center;
+  }
+</style>
+
+<div class="section-title">
+  <h2>End Users</h2>
+</div>
+
+<div class="logos-container">
+  <!-- First Pair of Logos -->
+  <div class="logo-link">
+    <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">
+      <img src="../images/openshift-logo.png" alt="OpenShift" width="250" />
+    </a>
+  </div>
+  <div class="logo-link">
+    <a href="https://github.com/dana-team">
+      <img src="../images/idf-logo.png" alt="IDF" width="150" />
+    </a>
+  </div>
+</div>
+
+<!-- Add more sections with logos here, create a new "logos-container" block for that -->
+<div class="logos-container center-logo">
+  <!-- Second Pair of Logos -->
+  <div class="logo-link">
+    <a href="https://www.nec.com/">
+      <img src="../images/nec-logo.png" alt="NEC" width="150" />
+    </a>
+  </div>
+  <!-- Add more logos here if needed -->
+</div>
+ 
