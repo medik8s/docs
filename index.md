@@ -93,20 +93,10 @@ document.body.addEventListener("load", openRemediationMenu(), false);
     </a>
   </div>
   <div class="logo-link">
-    <a href="https://github.com/dana-team">
-      <img src="../images/idf-logo.png" alt="IDF" width="150" />
+    <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">
+      <img src="../images/openshift-logo.png" alt="OpenShift" width="250" />
     </a>
   </div>
 </div>
 
 <!-- Add more sections with logos here, create a new "logos-container" block for that -->
-<div class="logos-container center-logo">
-  <!-- Second Pair of Logos -->
-  <div class="logo-link">
-    <a href="https://www.nec.com/">
-      <img src="../images/nec-logo.png" alt="NEC" width="150" />
-    </a>
-  </div>
-  <!-- Add more logos here if needed -->
-</div>
- 
