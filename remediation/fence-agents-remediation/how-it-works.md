@@ -14,7 +14,7 @@ which creates a Custom Resource (CR) for FAR with information about the unhealth
 The remediation includes rebooting the unhealthy node using a fence agent and evicting workloads from the unhealthy node by resource deletion.
 
 FAR uses a fence agent to fence a Kubernetes node. Generally, fencing is the process of taking unresponsive/unhealthy servers into a safe state and isolating the server.
-Fence agent is a software code that uses a management interface to perform fencing, mostly power-based fencing which enables power-cycling, resetting, or turning off the server.
+Fence agent is a software code that uses an Application Programming Interface (API) call to perform fencing, mostly power-based fencing which enables power-cycling, resetting, or turning off the server.
 FAR includes some of the fence agents from the [upstream repository](https://github.com/ClusterLabs/fence-agents) by the *ClusterLabs* group.
 
 For more on how FAR operator works, please go to its [documentation](https://github.com/medik8s/fence-agents-remediation#how-does-far-work).
