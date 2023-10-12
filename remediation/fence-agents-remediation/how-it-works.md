@@ -6,9 +6,9 @@ grand_parent: Remediation
 nav_order: 1
 ---
 
-## How does Fence Agents Remediation works?
+## How does Fence Agents Remediation work?
 
-The fence Agents Remediation (FAR) operator uses a traditional API to remediate unhealthy Kubernetes nodes.
+The Fence Agents Remediation (FAR) operator uses a traditional API to remediate unhealthy Kubernetes nodes.
 It is designed to be used with [Node HealthCheck Operator](https://github.com/medik8s/node-healthcheck-operator) (NHC),
 which creates a Custom Resource (CR) for FAR with information about the unhealthy Node.
 The remediation includes rebooting the unhealthy node using a fence agent and evicting workloads from the unhealthy node by resource deletion.
