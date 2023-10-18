@@ -46,3 +46,5 @@ function openRemediationMenu(){
  }
 document.body.addEventListener("load", openRemediationMenu(), false);
 </script>
+
+{% include_relative collaborators_section.html %}
