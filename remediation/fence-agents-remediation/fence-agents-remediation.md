@@ -6,7 +6,8 @@ has_children: true
 parent: Remediation
 ---
 
-## Fence Agents Remediation
+<!-- markdownlint-disable-next-line MD025 -->
+# Fence Agents Remediation
 
 Generally Available
 {: .label .label-green }
@@ -28,7 +29,7 @@ Moreover, FAR is available in the Kubernetes community, [OperatorHub.io](https:/
 As opposed to other remediation systems, FAR requires credentials for running the API call (e.g., Intelligent Platform Management Interface ([IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)), etc.)
 to reboot a node, but it has many advantages.
 
-### Advantages
+## Advantages
 
 * Robustness - FAR has direct feedback from the traditional API call (e.g., IPMI) about the result of the fence action without using the Kubernetes API.
 * Speed - FAR is rapid since it can reboot a node and receive an acknowledgment from the API call while others might need to wait a safe time till they can expect the node to be rebooted.

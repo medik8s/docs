@@ -5,18 +5,19 @@ nav_order: 4
 has_children: true
 ---
 
-## Putting Nodes into a Safe State (Remediation)
+<!-- markdownlint-disable-next-line MD025 -->
+# Putting Nodes into a Safe State (Remediation)
 
 {: .no_toc }
 
-### Table of contents
+## Table of contents
 
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-### The Problem
+## The Problem
 
 A common approach to for providing high availability for Kubernetes is to run
 multiple copies of a service and starting replacements when any fail.  However
@@ -26,7 +27,7 @@ kinds of resources elsewhere, we must be certain that the "old" location not
 only looks dead/down and not running them, but **is definitely** dead/down and not
 running them.
 
-### Remediation
+## Remediation
 
 At it's core, remediation (aka. fencing) turns a question _Can our peer cause
 data corruption?_ into an answer _**No!**_ by isolating it both from incoming
@@ -51,7 +52,7 @@ remediation.  For this reason, the [ExternalRemediation API](https://github.com/
 was established to allow multiple remediation mechanisms to exist, even within a
 single cluster, without creating conflicts.
 
-### Implementations
+## Implementations
 
 Implementations conforming to the ExternalRemediation API include:
 

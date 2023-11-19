@@ -6,7 +6,8 @@ grand_parent: Remediation
 nav_order: 2
 ---
 
-## Fence Agents Remediation Configuration
+<!-- markdownlint-disable-next-line MD025 -->
+# Fence Agents Remediation Configuration
 
 Fence Agents Remediation (FAR) uses a Custom Resource (CR) created by [Node Health Check Operator](https://github.com/medik8s/node-healthcheck-operator#readme) (NHC) based on a FAR's remediation template (*FenceAgentsRemediationTemplate*).
 
