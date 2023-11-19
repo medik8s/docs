@@ -18,8 +18,9 @@ to fence a node using a traditional Application Programming Interface (API) call
 By doing so FAR can minimize downtime for stateful applications, restore compute capacity if transient failures occur, and increase the availability of workloads.
 
 FAR is not only fencing a node when it becomes unhealthy, it also tries to *remediate* the node from being unhealthy to healthy again.
-It adds a taint to evict stateless pods, fence the node with a fence agent, and after reboot it completes the remediation with
-resource deletion to remove any remaining workloads (mostly stateful workloads).
+It adds a taint to evict stateless pods ([NoExecute](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/#taint-based-evictions)), fence the node with a fence agent,
+and after reboot it completes the remediation with resource deletion to remove any remaining workloads (mostly stateful workloads).
+Adding the taint and deleting the workloads accelerates the workload rescheduling.
 
 Similar to the other [remediation operators from Medik8s](https://www.medik8s.io/remediation/remediation/#implementations), FAR can be used to remediate a node that has been detected/selected to be remediated.
 The selection can be done with the [Node HealthCheck Operator (NHC)](https://github.com/medik8s/node-healthcheck-operator#readme) which detects the node’s health,
@@ -33,6 +34,5 @@ to reboot a node, but it has many advantages.
 
 * Robustness - FAR has direct feedback from the traditional API call (e.g., IPMI) about the result of the fence action without using the Kubernetes API.
 * Speed - FAR is rapid since it can reboot a node and receive an acknowledgment from the API call while others might need to wait a safe time till they can expect the node to be rebooted.
-Similarly to some other operators, FAR adds a NoExecute taint and deletes workloads to accelerate workload rescheduling, in addition to rebooting the node.
 * Diversity - FAR includes several fence agents from a whole known set of upstream fencing agents for bare metal servers, virtual machines, cloud platforms, etc.
 * Adjustability - FAR allows to set up different parameters for running the API call that remediates the node.
