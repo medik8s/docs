@@ -22,12 +22,13 @@ It adds a taint to evict stateless pods ([NoExecute](https://kubernetes.io/docs/
 and after reboot it completes the remediation with resource deletion to remove any remaining workloads (mostly stateful workloads).
 Adding the taint and deleting the workloads accelerates the workload rescheduling.
 
-Similar to the other [remediation operators from Medik8s](https://www.medik8s.io/remediation/remediation/#implementations), FAR can be used to remediate a node that has been detected/selected to be remediated.
-The selection can be done with the [Node HealthCheck Operator (NHC)](https://github.com/medik8s/node-healthcheck-operator#readme) which detects the node’s health,
-another detection mechanism (or any other operator that supports an external remediation API), or even manually using an administrator’s help.
-Moreover, FAR is available in the Kubernetes community, [OperatorHub.io](https://operatorhub.io/operator/fence-agents-remediation), and can be installed manually as mentioned in [FAR documentation](https://github.com/medik8s/fence-agents-remediation#installation).
+FAR, similarly to the other [remediation operators from Medik8s](https://www.medik8s.io/remediation/remediation/#implementations), remediates an unhealthy node by creating its own [custome resource (CR)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
+for that node.
+The node can be detected as unhealthy using the [Node HealthCheck Operator (NHC)](https://github.com/medik8s/node-healthcheck-operator#readme) which checks the node’s health
+(and automatically creates far CR when it is needed), another detection mechanism (or any other operator that supports an external remediation API), or even manually using an administrator’s help.
+Moreover, FAR is available in the Kubernetes community, [OperatorHub.io](https://operatorhub.io/operator/fence-agents-remediation), and it can even be installed manually as mentioned in [FAR documentation](https://github.com/medik8s/fence-agents-remediation#installation).
 
-As opposed to other remediation systems, FAR requires credentials for running the API call (e.g., Intelligent Platform Management Interface ([IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)), etc.)
+In contrast to other remediation systems, FAR requires credentials for running the API call (e.g., Intelligent Platform Management Interface ([IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)), etc.)
 to reboot a node, but it has many advantages.
 
 ## Advantages
