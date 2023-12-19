@@ -57,7 +57,7 @@ single cluster, without creating conflicts.
 Implementations conforming to the ExternalRemediation API include:
 
 * [self-node-remediation](/remediation/self-node-remediation/self-node-remediation/) - a mechanism designed for shared-nothing environments without programmatic access to BMC-like hardware
-* [(wip) metal3](https://github.com/metal3-io/cluster-api-provider-metal3/pull/157) - a mechanism designed for bare metal clusters with a functioning Metal3 API
-* [machine-deletion-remediation](https://github.com/medik8s/machine-deletion-remediation) - a mechanism designed for any cluster with a functioning Machine API
-* [fence-agents-remediation](https://github.com/medik8s/fence-agents-remediation) - a mechanism designed around an existing set of [upstream fencing agents](https://github.com/ClusterLabs/fence-agents) for environments with a traditional API end-point (e.g., IPMI) for power-cycling the cluster nodes
+* [(wip) metal3](/remediation/metal3/metal3/) - a mechanism designed for bare metal clusters with a functioning Metal3 API
+* [machine-deletion-remediation](/remediation/machine-deletion-remediation/machine-deletion-remediation/) - a mechanism designed for any cluster with a functioning Machine API
+* [fence-agents-remediation](/remediation/fence-agents-remediation/fence-agents-remediation/) - a mechanism designed around an existing set of [upstream fencing agents](https://github.com/ClusterLabs/fence-agents) for environments with a traditional API end-point (e.g., IPMI) for power-cycling the cluster nodes
 * (concept) meatware - a mechanism that includes explicit approval by a human
