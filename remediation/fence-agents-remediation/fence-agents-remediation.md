@@ -16,7 +16,6 @@ The [Fence Agents Remediation](https://github.com/medik8s/fence-agents-remediati
 The remediation includes rebooting the unhealthy node using a fence agent and then evicting workloads from the unhealthy node.
 
 FAR is available in the Kubernetes community, [OperatorHub.io](https://operatorhub.io/operator/fence-agents-remediation), or it can be installed manually as mentioned in [FAR documentation](https://github.com/medik8s/fence-agents-remediation#installation).
-Below are his main advantages.
 
 ## Advantages
 

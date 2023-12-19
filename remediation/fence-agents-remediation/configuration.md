@@ -10,7 +10,7 @@ nav_order: 2
 # Fence Agents Remediation Configuration
 
 Fence Agents Remediation (FAR) operator watches *FenceAgentsRemediation* (or *far*) Custom Resource ([CR](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)).
-FAR can run alongside another operator (e.g., Node Health Check Operator [(NHC)](https://github.com/medik8s/node-healthcheck-operator#readme)) or another mechnaisam that trigger FAR by automatically creating far CRs using *FenceAgentsRemediationTemplate* (or *fartemplate*) CR. FAR can also be run as standalone, when far CR is generated manually using an administrator’s help.
+Those CRs can be created either manually by cluster administrators (and run as standalone), or by other operators (e.g., Node Health Check Operator [(NHC)](https://github.com/medik8s/node-healthcheck-operator#readme)) or different mechnaisams that trigger FAR by automatically creating far CRs using *FenceAgentsRemediationTemplate* (or *fartemplate*) CR.
 
 ## FAR with NHC
 
@@ -20,13 +20,10 @@ NHC needs to be configured to use FAR, thus a user must do the following steps:
 * Create fartemplate CR
 * Create NHC CR to use fartemplate CR accordingly (see [NHC documentation](https://github.com/medik8s/node-healthcheck-operator/blob/main/docs/configuration.md#remediationtemplate)).
 
-<!-- Fence Agents Remediation (FAR) uses a Custom Resource (CR) created by [Node Health Check Operator](https://github.com/medik8s/node-healthcheck-operator#readme) (NHC) based on a FAR's remediation template (*FenceAgentsRemediationTemplate*). -->
-
 ## FAR Standalone
-
-Administrator should choose the fence agent based on the cluster platform, and know its parameters for running FAR properly.
 
 * Install FAR
 * Create far CR where the CR name should be the node to be remediated
 
-For more on how to confogure and use FAR, please go to its [documentation](https://github.com/medik8s/fence-agents-remediation#usage).
+The operator has many fence agents for different use cases, thus a user should choose the fence agent based on the cluster platform, and know its parameters for running FAR properly.
+For more on how to configure and use FAR, please go to its [documentation](https://github.com/medik8s/fence-agents-remediation#usage).
