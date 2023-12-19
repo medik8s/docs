@@ -10,7 +10,8 @@ nav_order: 2
 # Fence Agents Remediation Configuration
 
 Fence Agents Remediation (FAR) operator watches *FenceAgentsRemediation* (or *far*) Custom Resource ([CR](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)).
-Those CRs can be created either manually by cluster administrators (and run as standalone), or by other operators (e.g., Node Health Check Operator [(NHC)](https://github.com/medik8s/node-healthcheck-operator#readme)) or different mechnaisams that trigger FAR by automatically creating far CRs using *FenceAgentsRemediationTemplate* (or *fartemplate*) CR.
+Those CRs can be created either manually by cluster administrators, or by other operators (e.g., Node Health Check Operator [(NHC)](https://github.com/medik8s/node-healthcheck-operator#readme)) or simialr tools that trigger FAR by automatically creating far CRs using *FenceAgentsRemediationTemplate* (or *fartemplate*) CR.
+FAR is recommended to be used with NHC.
 
 ## FAR with NHC
 
