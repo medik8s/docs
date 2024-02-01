@@ -12,7 +12,7 @@ parent: Remediation
 Generally Available
 {: .label .label-green }
 
-The [Fence Agents Remediation](https://github.com/medik8s/fence-agents-remediation#readme) (FAR) is a Kubernetes operator that uses well-known agents to fence and remediate unhealthy nodes.
+[Fence Agents Remediation](https://github.com/medik8s/fence-agents-remediation#readme) (FAR) is a Kubernetes operator that uses well-known agents to fence and remediate unhealthy nodes.
 The remediation includes rebooting the unhealthy node using a fence agent and then evicting workloads from the unhealthy node.
 
 FAR is available in the Kubernetes community, [OperatorHub.io](https://operatorhub.io/operator/fence-agents-remediation), or it can be installed manually as mentioned in [FAR documentation](https://github.com/medik8s/fence-agents-remediation#installation).
