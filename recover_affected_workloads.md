@@ -47,7 +47,7 @@ the volume from the underlying storage system - a unique operation per driver pr
 After a successful unpublishing the pod and the volume can start again, on a different
 node.
 
-## Virtualized worker note
+## Virtualized worker node
 Nodes which are VMs should be configured with a watchdog device ([see libvirt's watchdog support][3])
 In case it's not configured then self-node-remediation fallbacks to rebooting the machine
 using 'systemctl reboot'. The benefits of a virtualized watchdog is that its running
