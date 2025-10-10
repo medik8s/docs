@@ -26,22 +26,22 @@ If there wasn't SNR CR when the node turned unhealthy, you should probably check
 
 If SNR CR was created, make sure its name matches the unhealthy node/machine object.
 
-In addition, check the logs of the self node remediation agents. You should check the logs of the pod on the unhealthy node, and of other pod on a healthy node.
+If the node is still not being remediated after confirming the CR exists, verify that your worker nodes have the required `node-role.kubernetes.io/worker` label. SelfNodeRemediation uses this label as a selector to identify worker nodes and form a peer list for health determination.
 
-If the following logs appear, it indicates that SNR failed to retrieve the list of worker nodes. This issue occurs because SNR uses the `node-role.kubernetes.io/worker` label as a selector when creating the peer list of worker nodes.
+Check if your nodes have this label:
 
-```
-2024-11-14T03:34:40.012616124Z  INFO    api-check       failed to check api server: api server readyz endpoint error: Get "https://10.96.0.1:443/readyz?exclude=shutdown": context deadline exceeded
-2024-11-14T03:34:40.01264309Z   INFO    api-check       Error count exceeds threshold, trying to ask other nodes if I'm healthy
-2024-11-14T03:34:40.012646838Z  INFO    api-check       Peers list is empty and / or couldn't be retrieved from server, nothing we can do, so consider the node being healthy
-2024-11-14T03:34:40.012649011Z  INFO    api-check       peers did not confirm that we are unhealthy, ignoring error
+```bash
+kubectl get nodes -l node-role.kubernetes.io/worker --show-labels
 ```
 
+If no nodes are listed, it indicates that the worker nodes lack the necessary label.
 To resolve this, set node labels on your worker nodes by running the following command:
 
 `kubectl label nodes <node-name> node-role.kubernetes.io/worker=`
 
 For more details, see [issue #268](https://github.com/medik8s/self-node-remediation/issues/268).
+
+In addition, check the logs of the self node remediation agents. You should check the logs of the pod on the unhealthy node, and of other pod on a healthy node.
 
 ## Self Node Remediation daemonset still exists after operator uninstall
 
@@ -55,23 +55,14 @@ If the control plane node reboots unexpectedly, check the logs of the `self-node
 kubectl logs self-node-remediation-ds-<id>
 ```
 
-If you see logs like below, you need to set up DNS resolution for the control plane node name.
+If you see logs like below, you might need to set up DNS resolution for the control plane node name.
 
 ```
 ERROR   controlPlane.Manager    kubelet service is down {"node name": "master", "error": "Get \"https://master:10250/pods\": dial tcp: lookup master on 10.96.0.10:53: server misbehaving"}
 INFO    rebooter        watchdog feeding has stopped, waiting for reboot to commence
 ```
 
-* in this example, the control plane node name got by `kubectl get nodes` is `master`.
-
-For setting up DNS resolution, you can use any method that works in your environment. For example, [hosts plugin](https://coredns.io/plugins/hosts/) of [CoreDNS](https://coredns.io/) can be used to set up the name resolution by adding an entry like below to the CoreDNS configmap.
-
-```yaml
-        hosts {
-           192.168.0.10 master
-           fallthrough
-        }
-```
+SNR requires DNS resolution for Kubernetes node names to function correctly. To diagnose this issue, check if your cluster's DNS can resolve the node names returned by `kubectl get nodes`. If DNS resolution is missing or misconfigured, you'll need to set up proper DNS resolution in your environment.
 
 For more details, see [issue #267](https://github.com/medik8s/self-node-remediation/issues/267).
 
