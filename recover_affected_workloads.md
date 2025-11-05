@@ -43,7 +43,7 @@ will be created.
 # Volume recovery flow
 
 Regular volumes attached to pod are ephemeral and don't contain persisted data.
-They are mostly used to mount secretes, config maps, share unix sockets between
+They are mostly used to mount secrets, config maps, share unix sockets between
 components and maybe temporary storage of data. Recovering them is not considered
 an issue.
 Persistent volumes however are the main concern of workload that is lost.
